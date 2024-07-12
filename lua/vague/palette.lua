@@ -1,0 +1,26 @@
+local M = {
+  bg = "#18191a",
+  fg = "#cdcdcd",
+  float = "#18191a",
+  border = "#878787",
+  line = "#282830",
+  comment = "#646477",
+  builtin = "#be8c8c",
+  func = "#be8c8c",
+  string = "#d7b797",
+  number = "#d2a374",
+  property = "#b4b4ce",
+  constant = "#b4b4ce",
+  visual = "#363738",
+  error = "#e6788c",
+  warning = "#e6be8c",
+  hint = "#8ca0dc",
+  operator = "#96a3b2",
+  keyword = "#7894ab",
+  type = "#a1b3b9",
+  search = "#465362",
+  plus = "#a3cd81",
+  delta = "#e6be8c",
+}
+
+return M
