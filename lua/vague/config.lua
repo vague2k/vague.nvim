@@ -24,6 +24,7 @@ local M = {}
 ---@field number? string
 ---@field property? string
 ---@field constant? string
+---@field parameter? string
 ---@field visual? string
 ---@field error? string
 ---@field warning? string
@@ -69,6 +70,7 @@ local DEFAULT_SETTINGS = {
     number = "#d2a374",
     property = "#b4b4ce",
     constant = "#b4b4ce",
+    parameter = "#cda4ce",
     visual = "#363738",
     error = "#e6788c",
     warning = "#e6be8c",

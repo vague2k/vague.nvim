@@ -22,12 +22,12 @@ end
 hl.common = {
   ColorColumn = { bg = c.line },
   Conceal = { fg = c.func, bg = c.bg },
-  CurSearch = { fg = c.type, bg = c.bg or c.visual },
-  Cursor = { fmt = "reverse" },
-  vCursor = { fmt = "reverse" },
-  iCursor = { fmt = "reverse" },
-  lCursor = { fmt = "reverse" },
-  CursorIM = { fmt = "reverse" },
+  CurSearch = { fg = c.fg, bg = c.search or c.visual },
+  Cursor = { gui = "reverse" },
+  vCursor = { gui = "reverse" },
+  iCursor = { gui = "reverse" },
+  lCursor = { gui = "reverse" },
+  CursorIM = { gui = "reverse" },
   CursorColumn = { bg = c.line },
   CursorLine = { bg = c.line },
   CursorLineNr = { fg = c.fg },
@@ -43,42 +43,38 @@ hl.common = {
   DiffFile = { fg = c.keyword },
   DiffIndexLine = { fg = c.comment },
   Directory = { fg = c.hint },
-  ErrorMsg = { fg = c.error, fmt = "bold" },
+  ErrorMsg = { fg = c.error, gui = "bold" },
   EndOfBuffer = { c.comment or c.bg },
-  FloatBorder = {
-    fg = c.border,
-    bg = c.bg,
-  },
-  FloatTitle = { fg = c.comment, bg = c.bg },
+  FloatBorder = { fg = c.floatBorder, bg = config.transparent and c.none or c.bg },
+  FloatTitle = { fg = c.floatBorder, bg = config.transparent and c.none or c.bg },
+  FloatFooter = { fg = c.floatBorder, bg = config.transparent and c.none or c.bg },
   Folded = { fg = c.comment, bg = config.transparent and c.none or c.line },
   FoldColumn = { fg = c.comment, bg = config.transparent and c.none or c.bg },
-  IncSearch = {
-    fg = c.bg,
-    bg = c.type,
-  },
+  IncSearch = { fg = c.bg, bg = c.search or c.visual },
   LineNr = { fg = c.comment },
   MatchParen = { fg = c.fg, bg = c.visual },
-  MoreMsg = { fg = c.func, fmt = "bold" },
-  MsgSeparator = { fg = c.string, bg = c.line, fmt = "bold" },
+  MoreMsg = { fg = c.func, gui = "bold" },
+  MsgSeparator = { fg = c.string, bg = c.line, gui = "bold" },
   NonText = { fg = c.comment },
   Normal = { fg = c.fg, bg = config.transparent and c.none or c.bg },
   NormalFloat = { fg = c.fg, bg = config.transparent and c.none or c.bg },
+  ModeMsg = { fg = c.string },
   Pmenu = { fg = c.fg, bg = c.visual },
   PmenuSbar = { fg = c.none, bg = c.visual },
   PmenuSel = { bg = c.bg },
   PmenuThumb = { fg = c.none, bg = c.visual },
   Question = { fg = c.constant },
-  QuickFixLine = { fg = c.func, fmt = "underline" },
-  Search = { fg = c.bg, bg = c.hint or c.visual },
+  QuickFixLine = { fg = c.func, gui = "underline" },
+  Search = { fg = c.fg, bg = c.search or c.visual },
   SignColumn = { fg = c.fg, bg = config.transparent and c.none or c.bg },
   SpecialKey = { fg = c.comment },
-  SpellBad = { fg = c.none, fmt = "undercurl", sp = c.operator },
-  SpellCap = { fg = c.none, fmt = "undercurl", sp = c.constant },
-  SpellLocal = { fg = c.none, fmt = "undercurl", sp = c.builtin },
-  SpellRare = { fg = c.none, fmt = "undercurl", sp = c.preproc },
+  SpellBad = { fg = c.none, gui = "undercurl" },
+  SpellCap = { fg = c.none, gui = "undercurl" },
+  SpellLocal = { fg = c.none, gui = "undercurl" },
+  SpellRare = { fg = c.none, gui = "undercurl" },
   StatusLine = { fg = c.fg, bg = c.comment },
   StatusLineTerm = { fg = c.fg, bg = c.line },
-  StatusLineNC = { fg = c.comment, bg = c.c3 },
+  StatusLineNC = { fg = c.comment, bg = c.bg },
   StatusLineTermNC = { fg = c.comment, bg = c.line },
   Substitute = { fg = c.type, bg = c.visual },
   TabLine = { fg = c.fg, bg = c.line },
@@ -88,56 +84,56 @@ hl.common = {
   ToolbarButton = { fg = c.bg, bg = c.visual },
   ToolbarLine = { fg = c.fg },
   Visual = { fg = c.fg, bg = c.visual },
-  VisualNOS = { fg = c.none, bg = c.comment, fmt = "underline" },
-  WarningMsg = { fg = c.type, fmt = "bold" },
+  VisualNOS = { fg = c.none, bg = c.comment, gui = "underline" },
+  WarningMsg = { fg = c.warning, gui = "bold" },
   Whitespace = { fg = c.comment },
   WildMenu = { fg = c.bg, bg = c.func },
   WinSeparator = { fg = c.border },
 }
 
 hl.syntax = {
-  Boolean = { fg = c.constant }, -- boolean constants
+  Boolean = { fg = c.number }, -- boolean constants
   Character = { fg = c.string }, -- character constants
-  Comment = { fg = c.comment, fmt = config.style.comments }, -- comments
+  Comment = { fg = c.comment, gui = config.style.comments }, -- comments
   Constant = { fg = c.constant }, -- (preferred) any constant
   Delimiter = { fg = c.fg }, -- delimiter characters
-  Float = { fg = c.constant }, -- float constants
-  Function = { fg = c.func, fmt = config.style.functions }, -- functions
-  Error = { fg = c.error }, -- (preferred) any erroneous construct
+  Float = { fg = c.number }, -- float constants
+  Function = { fg = c.func, gui = config.style.functions }, -- functions
+  Error = { fg = c.error, gui = "bold" }, -- (preferred) any erroneous construct
   Exception = { fg = c.error }, -- 'try', 'catch', 'throw'
-  Identifier = { fg = c.property, fmt = config.style.variables }, -- (preferred) any variable
-  Keyword = { fg = c.keyword, fmt = config.style.keywords }, -- any other keyword
-  Conditional = { fg = c.keyword, fmt = config.style.conditionals }, -- conditionals
-  -- Repeat = { fg = c.preproc, fmt = config.code_style.keywords }, -- loop keywords: 'for', 'while' etc
+  Identifier = { fg = c.constant, gui = config.style.variables }, -- (preferred) any variable
+  Keyword = { fg = c.keyword, gui = config.style.keywords }, -- any other keyword
+  Conditional = { fg = c.keyword, gui = config.style.conditionals }, -- conditionals
+  -- Repeat = { fg = c.preproc, gui = config.code_style.keywords }, -- loop keywords: 'for', 'while' etc
   -- Label = { fg = c.preproc }, -- 'case', 'default', etc
-  Number = { fg = c.constant }, -- number constant
-  Operator = { fg = c.operator, fmt = config.style.operators }, -- '+', '*', 'sizeof' etc
-  PreProc = { fg = c.preproc }, -- (preferred) generic preprocessor
+  Number = { fg = c.number }, -- number constant
+  Operator = { fg = c.operator, gui = config.style.operators }, -- '+', '*', 'sizeof' etc
+  PreProc = { fg = c.constant }, -- (preferred) generic preprocessor
   -- Define = { fg = c.comment }, -- preprocessor '#define'
-  -- Include = { fg = c.keyword, fmt = config.code_style.keywords }, -- preprocessor '#include'
-  -- Macro = { fg = c.constant, fmt = config.code_style.constants }, -- macros
+  -- Include = { fg = c.keyword, gui = config.code_style.keywords }, -- preprocessor '#include'
+  -- Macro = { fg = c.constant, gui = config.code_style.constants }, -- macros
   -- PreCondit = { fg = c.comment }, -- preprocessor conditionals '#if', '#endif' etc
-  Special = { fg = c.builtin }, -- (preferred) any special symbol
+  Special = { fg = c.func }, -- (preferred) any special symbol
   SpecialChar = { fg = c.keyword }, -- special character in a constant
-  -- SpecialComment = { fg = c.keyword, fmt = config.code_style.comments }, -- special things inside comments
+  -- SpecialComment = { fg = c.keyword, gui = config.code_style.comments }, -- special things inside comments
   -- Tag = { fg = c.builtin }, -- can use <C-]> on this
   Statement = { fg = c.keyword }, -- (preferred) any statement
-  String = { fg = c.string, fmt = config.style.strings }, -- string constants
+  String = { fg = c.string, gui = config.style.strings }, -- string constants
   Title = { fg = c.property },
   Type = { fg = c.type }, -- (preferred) 'int', 'long', 'char' etc
-  -- StorageClass = { fg = c.constant, fmt = config.code_style.keywords }, -- 'static', 'volatile' etc
+  -- StorageClass = { fg = c.constant, gui = config.code_style.keywords }, -- 'static', 'volatile' etc
   -- Structure = { fg = c.constant }, -- 'struct', 'union', 'enum' etc
   -- Typedef = { fg = c.constant }, -- 'typedef'
-  Todo = { fg = c.func, fmt = config.style.comments }, -- (preferred) 'TODO' keywords in comments
+  Todo = { fg = c.func, gui = config.style.comments }, -- (preferred) 'TODO' keywords in comments
 }
 
 if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
   hl.treesitter = {
     -- identifiers
-    ["@variable"] = { fg = c.fg, fmt = config.style.variables }, -- any variable that does not have another highlight
+    ["@variable"] = { fg = c.fg, gui = config.style.variables }, -- any variable that does not have another highlight
     ["@variable.builtin"] = hl.syntax["Special"], -- variable names that are defined by the language, like 'this' or 'self'
     ["@variable.member"] = { fg = c.property }, -- fields
-    -- ["@variable.parameter"] = { fg = c.property }, -- parameters of a function
+    ["@variable.parameter"] = { fg = c.parameter }, -- parameters of a function
     -- ["@variable.field"] = { fg = c.builtin }, -- fields
 
     -- ["@constant"] = { link = "Constant" }, -- constants
@@ -179,17 +175,17 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     -- ["@function.method"]
     -- ["@function.method.call"]
 
-    ["@constructor"] = { fg = c.constant, fmt = config.style.functions }, -- constructor calls and definitions
-    ["@constructor.lua"] = { fg = c.alt, fmt = config.style.functions }, -- constructor calls and definitions, `= { }` in lua
+    ["@constructor"] = { fg = c.constant, gui = config.style.functions }, -- constructor calls and definitions
+    ["@constructor.lua"] = { fg = c.type, gui = config.style.functions }, -- constructor calls and definitions, `= { }` in lua
     ["@operator"] = hl.syntax["Operator"], -- operators, like `+`
 
     -- keywords
-    ["@keyword"] = { fg = c.keyword, fmt = config.style.keywords }, -- keywords that don't fall in previous categories
+    ["@keyword"] = { fg = c.keyword, gui = config.style.keywords }, -- keywords that don't fall in previous categories
     ["@keyword.exception"] = hl.syntax["Exception"], -- exception related keywords
     ["@keyword.import"] = hl.syntax["PreProc"], -- keywords used to define a function
-    ["@keyword.conditional"] = { fg = c.keyword, fmt = config.style.conditionals }, -- keywords for conditional statements
-    ["@keyword.operator"] = { fg = c.keyword, fmt = config.style.operators }, -- keyword operator (eg, 'in' in python)
-    ["@keyword.return"] = { fg = c.keyword, fmt = config.style.keyword_return }, -- keywords used to define a function
+    ["@keyword.conditional"] = { fg = c.keyword, gui = config.style.conditionals }, -- keywords for conditional statements
+    ["@keyword.operator"] = { fg = c.keyword, gui = config.style.operators }, -- keyword operator (eg, 'in' in python)
+    ["@keyword.return"] = { fg = c.keyword, gui = config.style.keyword_return }, -- keywords used to define a function
     -- ["@keyword.builtin"] = hl.syntax["Type"], -- keywords used to define a function
     -- ["@keyword.function"] = hl.syntax["Function"], -- keywords used to define a function
     -- ["@keyword.import"] = hl.syntax["Include"], -- includes, like '#include' in c, 'require' in lua
@@ -209,19 +205,19 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
 
     -- markup
     ["@markup"] = { fg = c.fg }, -- text in markup language
-    ["@markup.strong"] = { fg = c.fg, fmt = "bold" }, -- bold
-    ["@markup.italic"] = { fg = c.fg, fmt = "italic" }, -- italic
-    ["@markup.underline"] = { fg = c.fg, fmt = "underline" }, -- underline
-    ["@markup.strikethrough"] = { fg = c.comment, fmt = "strikethrough" }, -- strikethrough
-    ["@markup.heading"] = { fg = c.keyword, fmt = config.style.headings }, -- markdown titles
+    ["@markup.strong"] = { fg = c.fg, gui = "bold" }, -- bold
+    ["@markup.italic"] = { fg = c.fg, gui = "italic" }, -- italic
+    ["@markup.underline"] = { fg = c.fg, gui = "underline" }, -- underline
+    ["@markup.strikethrough"] = { fg = c.comment, gui = "strikethrough" }, -- strikethrough
+    ["@markup.heading"] = { fg = c.keyword, gui = config.style.headings }, -- markdown titles
     ["@markup.quote.markdown"] = { fg = c.comment }, -- quotes with >
-    ["@markup.link.uri"] = { fg = c.preproc, fmt = "underline" }, -- urls, links, emails
-    ["@markup.link"] = { fg = c.builtin }, -- text references, footnotes, citations, etc
+    ["@markup.link.uri"] = { fg = c.string, gui = "underline" }, -- urls, links, emails
+    ["@markup.link"] = { fg = c.string }, -- text references, footnotes, citations, etc
     ["@markup.list"] = { fg = c.func },
     ["@markup.list.checked"] = { fg = c.func }, -- todo checked
     ["@markup.list.unchecked"] = { fg = c.func }, -- todo unchecked
     ["@markup.raw"] = { fg = c.func }, -- inline code in markdown
-    ["@markup.math"] = { fg = c.builtin }, -- math environments, like `$$` in latex
+    ["@markup.math"] = { fg = c.string }, -- math environments, like `$$` in latex
 
     -- diff
     ["@diff.plus"] = { fg = c.plus }, -- added text (diff files)
