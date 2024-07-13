@@ -40,7 +40,6 @@ local M = {}
 ---@field transparent? boolean
 ---@field style? VagueConfig.style
 ---@field colors? VagueConfig.colors
----@field highlights? table
 
 ---@type VagueConfig
 local DEFAULT_SETTINGS = {
@@ -82,8 +81,6 @@ local DEFAULT_SETTINGS = {
     plus = "#a3cd81",
     delta = "#e6be8c",
   },
-  -- Override highlight groups
-  highlights = {},
 }
 
 M._DEFAULT_SETTINGS = DEFAULT_SETTINGS

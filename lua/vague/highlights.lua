@@ -299,6 +299,18 @@ hl.plugins.cmp = {
   CmpItemKind = { fg = c.comment },
 }
 
+hl.plugins.gitsigns = {
+  GitSignsAdd = { fg = c.plus },
+  GitSignsAddLn = { fg = c.plus },
+  GitSignsAddNr = { fg = c.plus },
+  GitSignsChange = { fg = c.delta },
+  GitSignsChangeLn = { fg = c.delta },
+  GitSignsChangeNr = { fg = c.delta },
+  GitSignsDelete = { fg = c.error },
+  GitSignsDeleteLn = { fg = c.error },
+  GitSignsDeleteNr = { fg = c.error },
+}
+
 hl.plugins.neo_tree = {
   NeoTreeNormal = { fg = c.fg, bg = config.transparent and c.none or c.bg },
   NeoTreeNormalNC = { fg = c.fg, bg = config.transparent and c.none or c.bg },
@@ -324,7 +336,7 @@ hl.plugins.telescope = {
   TelescopeResultsNormal = { fg = c.fg },
 }
 
-M.setup = function()
+M.set_highlights = function()
   --- set highlights for each group
   set_vim_highlights(hl.common)
   set_vim_highlights(hl.syntax)
