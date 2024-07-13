@@ -336,6 +336,13 @@ hl.plugins.telescope = {
   TelescopeResultsNormal = { fg = c.fg },
 }
 
+hl.plugins.dashboard = {
+  DashboardShortCut = { fg = c.constant },
+  DashboardHeader = { fg = c.keyword },
+  DashboardCenter = { fg = c.fg },
+  DashboardFooter = { fg = c.parameter, gui = "italic" },
+}
+
 M.set_highlights = function()
   --- set highlights for each group
   set_vim_highlights(hl.common)

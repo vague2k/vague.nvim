@@ -79,3 +79,4 @@ If you would like to propose support for a specific plugin, you can make a PR wi
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [Dashboard](https://github.com/nvimdev/dashboard-nvim)
