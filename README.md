@@ -2,6 +2,10 @@
 
 vague is a dark, low contrast theme inspired [ThePrimeagen](https://github.com/ThePrimeagen)'s use of [tokyonight](https://github.com/folke/tokyonight.nvim) without fixing [tmux](https://github.com/tmux/tmux)'s colors.
 
+Here's a preview of what that looks like in golang
+
+<img width="1446" alt="Screenshot 2024-07-12 at 10 14 43 PM" src="https://github.com/user-attachments/assets/a9c9894c-f83c-4f4f-a65c-55e257692c5a">
+
 ## Installation
 
 ```lua
