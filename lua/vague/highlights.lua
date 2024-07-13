@@ -265,9 +265,76 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
   end
 end
 
+hl.plugins.lsp = {
+  LspCxxHlGroupEnumConstant = { fg = c.type },
+  LspCxxHlGroupMemberVariable = { fg = c.type },
+  LspCxxHlGroupNamespace = { fg = c.func },
+  LspCxxHlSkippedRegion = { fg = c.comment },
+  LspCxxHlSkippedRegionBeginEnd = { fg = c.operator },
+  DiagnosticError = { fg = c.error, gui = "bold" },
+  DiagnosticHint = { fg = c.hint },
+  DiagnosticInfo = { fg = c.delta, fmt = "italic" },
+  DiagnosticWarn = { fg = c.warning },
+  DiagnosticVirtualTextError = { bg = c.none, fg = c.error, gui = "bold" },
+  DiagnosticVirtualTextWarn = { fg = c.warning },
+  DiagnosticVirtualTextInfo = { fg = c.hint },
+  DiagnosticVirtualTextHint = { fg = c.hint },
+  DiagnosticUnderlineError = { gui = "undercurl", sp = c.error },
+  DiagnosticUnderlineWarn = { gui = "undercurl", sp = c.delta },
+  DiagnosticUnderlineInfo = { gui = "undercurl", sp = c.hint },
+  DiagnosticUnderlineHint = { gui = "undercurl", sp = c.hint },
+  LspReferenceText = { bg = c.comment },
+  LspReferenceWrite = { bg = c.comment },
+  LspReferenceRead = { bg = c.comment },
+  LspCodeLens = { fg = c.comment, gui = config.style.comments },
+  LspCodeLensSeparator = { fg = c.comment },
+}
+
+hl.plugins.cmp = {
+  CmpItemAbbr = { fg = c.fg },
+  CmpItemAbbrDeprecated = { fg = c.comment, gui = "strikethrough" },
+  CmpItemAbbrMatch = { fg = c.keyword },
+  CmpItemAbbrMatchFuzzy = { fg = c.keyword, gui = "underline" },
+  CmpItemMenu = { fg = c.comment },
+  CmpItemKind = { fg = c.comment },
+}
+
+hl.plugins.neo_tree = {
+  NeoTreeNormal = { fg = c.fg, bg = config.transparent and c.none or c.bg },
+  NeoTreeNormalNC = { fg = c.fg, bg = config.transparent and c.none or c.bg },
+  NeoTreeVertSplit = { fg = c.comment, bg = config.transparent and c.none or c.comment },
+  NeoTreeWinSeparator = { fg = c.comment, bg = config.transparent and c.none or c.comment },
+  NeoTreeEndOfBuffer = { fg = c.comment, bg = config.transparent and c.none or c.bg },
+  NeoTreeRootName = { fg = c.hint, fmt = "bold" },
+  NeoTreeGitAdded = { fg = c.plus },
+  NeoTreeGitDeleted = { fg = c.error },
+  NeoTreeGitModified = { fg = c.delta },
+  NeoTreeGitConflict = { fg = c.error, fmt = "bold,italic" },
+  NeoTreeGitUntracked = { fg = c.error, fmt = "italic" },
+  NeoTreeIndentMarker = { fg = c.comment },
+  NeoTreeSymbolicLinkTarget = { fg = c.hint },
+}
+
+hl.plugins.telescope = {
+  TelescopeBorder = { fg = c.floatBorder },
+  TelescopeMatching = { fg = c.delta, gui = "bold" },
+  TelescopePromptPrefix = { fg = c.constant },
+  TelescopeSelection = { fg = c.constant, bg = c.bg },
+  TelescopeSelectionCaret = { fg = c.type },
+  TelescopeResultsNormal = { fg = c.fg },
+}
+
 M.setup = function()
+  --- set highlights for each group
   set_vim_highlights(hl.common)
   set_vim_highlights(hl.syntax)
+
+  if hl.treesitter then set_vim_highlights(hl.treesitter) end
+  if hl.lsp then set_vim_highlights(hl.lsp) end
+
+  for _, group in pairs(hl.plugins) do
+    set_vim_highlights(group)
+  end
 end
 
 return M
