@@ -113,7 +113,7 @@ hl.syntax = {
   -- Include = { fg = c.keyword, gui = config.code_style.keywords }, -- preprocessor '#include'
   -- Macro = { fg = c.constant, gui = config.code_style.constants }, -- macros
   -- PreCondit = { fg = c.comment }, -- preprocessor conditionals '#if', '#endif' etc
-  Special = { fg = c.func }, -- (preferred) any special symbol
+  Special = { fg = c.builtin }, -- (preferred) any special symbol
   SpecialChar = { fg = c.keyword }, -- special character in a constant
   -- SpecialComment = { fg = c.keyword, gui = config.code_style.comments }, -- special things inside comments
   -- Tag = { fg = c.builtin }, -- can use <C-]> on this
@@ -132,12 +132,12 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     -- identifiers
     ["@variable"] = { fg = c.fg, gui = config.style.variables }, -- any variable that does not have another highlight
     ["@variable.builtin"] = hl.syntax["Special"], -- variable names that are defined by the language, like 'this' or 'self'
-    ["@variable.member"] = { fg = c.property }, -- fields
+    ["@variable.member"] = { fg = c.builtin }, -- fields
     ["@variable.parameter"] = { fg = c.parameter }, -- parameters of a function
     -- ["@variable.field"] = { fg = c.builtin }, -- fields
 
     -- ["@constant"] = { link = "Constant" }, -- constants
-    ["@constant.builtin"] = hl.syntax["Special"], -- constants that are defined by the language, like 'nil' in lua
+    ["@constant.builtin"] = { fg = c.builtin, gui = "bold" }, -- constants that are defined by the language, like 'nil' in lua
     -- ["@constant.macro"] = { link = "Macro" }, -- constants that are defined by macros like 'NULL' in c
 
     -- ["@label"] = { link = "Label" }, -- labels
@@ -160,7 +160,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
 
     -- types
     -- ["@type"] = hl.syntax["Type"], -- types
-    -- ["@type.builtin"] = hl.syntax["Special"], --builtin types
+    ["@type.builtin"] = { fg = c.builtin, gui = "bold" }, --builtin types
     -- ["@type.definition"] = hl.syntax["Typedef"], -- typedefs
     -- ["@type.qualifier"]
 
@@ -169,7 +169,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
 
     -- functions
     -- ["@function"] = { link = "Function" }, -- functions
-    ["@function.builtin"] = hl.syntax["Special"], --builtin functions
+    ["@function.builtin"] = hl.syntax["Function"], --builtin functions
     -- ["@function.macro"] = { link = "Macro" }, -- macro defined functions
     -- ["@function.call"]
     -- ["@function.method"]
