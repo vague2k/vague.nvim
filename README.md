@@ -45,7 +45,7 @@ require("vague").setup({
     floatBorder = "#878787",
     line = "#282830",
     comment = "#646477",
-    builtin = "#be8c8c",
+    builtin = "#bad1ce",
     func = "#be8c8c",
     string = "#d7b797",
     number = "#d2a374",
@@ -53,7 +53,7 @@ require("vague").setup({
     constant = "#b4b4ce",
     parameter = "#b9a3ba",
     visual = "#363738",
-    error = "#e6788c",
+    error = "#d2788c",
     warning = "#e6be8c",
     hint = "#8ca0dc",
     operator = "#96a3b2",
@@ -61,7 +61,7 @@ require("vague").setup({
     type = "#a1b3b9",
     search = "#465362",
     -- used mostly in git related highlights
-    plus = "#a3cd81",
+    plus = "#8faf77",
     delta = "#e6be8c",
   }
 })
