@@ -343,6 +343,24 @@ hl.plugins.dashboard = {
   DashboardFooter = { fg = c.parameter, gui = "italic" },
 }
 
+hl.plugins.neotest = {
+  NeotestTest = { fg = c.fg },
+  NeotestUnknown = { fg = c.fg },
+  NeotestDir = { fg = c.comment },
+  NeotestFile = { fg = c.constant },
+  NeotestPassed = { fg = c.plus },
+  NeotestFailed = { fg = c.error },
+  NeotestMarked = { fg = c.delta },
+  NeotestWatching = { fg = c.warning },
+  NeotestTarget = { fg = c.func },
+  NeotestFocused = { fg = c.hint, gui = "bold" },
+  NeotestRunning = { fg = c.hint },
+  NeotestAdapterName = { fg = c.func, gui = "bold" },
+  NeotestNamespace = { fg = c.parameter },
+  NeotestSkipped = { fg = c.warning },
+  NeotestIndent = { fg = c.comment },
+}
+
 M.set_highlights = function()
   --- set highlights for each group
   set_vim_highlights(hl.common)
