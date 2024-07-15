@@ -132,7 +132,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     -- identifiers
     ["@variable"] = { fg = c.fg, gui = config.style.variables }, -- any variable that does not have another highlight
     ["@variable.builtin"] = hl.syntax["Special"], -- variable names that are defined by the language, like 'this' or 'self'
-    ["@variable.member"] = { fg = c.property }, -- fields
+    ["@variable.member"] = { fg = c.builtin }, -- fields
     ["@variable.parameter"] = { fg = c.parameter }, -- parameters of a function
     -- ["@variable.field"] = { fg = c.builtin }, -- fields
 
