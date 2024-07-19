@@ -160,7 +160,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
 
     -- types
     -- ["@type"] = hl.syntax["Type"], -- types
-    ["@type.builtin"] = { fg = c.builtin, gui = "bold" }, --builtin types
+    ["@type.builtin"] = { fg = c.builtin, gui = config.style.keywords }, --builtin types
     -- ["@type.definition"] = hl.syntax["Typedef"], -- typedefs
     -- ["@type.qualifier"]
 
