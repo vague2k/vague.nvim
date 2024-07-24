@@ -137,7 +137,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     -- ["@variable.field"] = { fg = c.builtin }, -- fields
 
     -- ["@constant"] = { link = "Constant" }, -- constants
-    ["@constant.builtin"] = { fg = c.builtin, gui = "bold" }, -- constants that are defined by the language, like 'nil' in lua
+    ["@constant.builtin"] = { fg = c.builtin, gui = config.style.builtin_constants }, -- constants that are defined by the language, like 'nil' in lua
     -- ["@constant.macro"] = { link = "Macro" }, -- constants that are defined by macros like 'NULL' in c
 
     -- ["@label"] = { link = "Label" }, -- labels
