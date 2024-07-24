@@ -11,6 +11,7 @@ local M = {}
 ---@field keyword_return? CodeStyle
 ---@field strings? CodeStyle
 ---@field variables? CodeStyle
+---@field builtin_constants? CodeStyle
 
 ---@class VagueConfig.colors
 ---@field bg? string
@@ -55,6 +56,7 @@ local DEFAULT_SETTINGS = {
     keyword_return = "none",
     strings = "italic",
     variables = "none",
+    builtin_constants = "none",
   },
   -- Override colors
   colors = {
