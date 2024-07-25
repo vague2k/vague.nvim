@@ -131,13 +131,13 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
   hl.treesitter = {
     -- identifiers
     ["@variable"] = { fg = c.fg, gui = config.style.variables }, -- any variable that does not have another highlight
-    ["@variable.builtin"] = hl.syntax["Special"], -- variable names that are defined by the language, like 'this' or 'self'
+    ["@variable.builtin"] = { fg = c.builtin, gui = config.style.builtin_variables }, -- variable names that are defined by the language, like 'this' or 'self'
     ["@variable.member"] = { fg = c.builtin }, -- fields
     ["@variable.parameter"] = { fg = c.parameter }, -- parameters of a function
     -- ["@variable.field"] = { fg = c.builtin }, -- fields
 
     -- ["@constant"] = { link = "Constant" }, -- constants
-    ["@constant.builtin"] = { fg = c.builtin, gui = "bold" }, -- constants that are defined by the language, like 'nil' in lua
+    ["@constant.builtin"] = { fg = c.builtin, gui = config.style.builtin_constants }, -- constants that are defined by the language, like 'nil' in lua
     -- ["@constant.macro"] = { link = "Macro" }, -- constants that are defined by macros like 'NULL' in c
 
     -- ["@label"] = { link = "Label" }, -- labels
@@ -160,7 +160,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
 
     -- types
     -- ["@type"] = hl.syntax["Type"], -- types
-    ["@type.builtin"] = { fg = c.builtin, gui = config.style.keywords }, --builtin types
+    ["@type.builtin"] = { fg = c.builtin, gui = config.style.builtin_types }, --builtin types
     -- ["@type.definition"] = hl.syntax["Typedef"], -- typedefs
     -- ["@type.qualifier"]
 
@@ -169,7 +169,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
 
     -- functions
     -- ["@function"] = { link = "Function" }, -- functions
-    ["@function.builtin"] = hl.syntax["Function"], --builtin functions
+    ["@function.builtin"] = { fg = c.builtin, gui = config.style.builtin_functions }, --builtin functions
     -- ["@function.macro"] = { link = "Macro" }, -- macro defined functions
     -- ["@function.call"]
     -- ["@function.method"]

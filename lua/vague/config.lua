@@ -18,6 +18,10 @@ local M = {}
 ---@field keywords_loop? CodeStyle -- "for", "while", etc
 ---@field keywords_label? CodeStyle -- "default", "case", etc
 ---@field keywords_exception? CodeStyle -- "try", "catch", etc
+---@field builtin_constants? CodeStyle -- like "nil" in lua and golang
+---@field builtin_functions? CodeStyle -- like "nil" in lua and golang
+---@field builtin_types? CodeStyle -- like "nil" in lua and golang
+---@field builtin_variables? CodeStyle -- like "this", "self"
 
 ---@class VagueConfig.colors
 ---@field bg? string
@@ -71,6 +75,12 @@ local DEFAULT_SETTINGS = {
     keywords_loop = "none",
     keywords_label = "none",
     keywords_exception = "none",
+
+    -- builtin
+    builtin_constants = "none",
+    builtin_functions = "none",
+    builtin_types = "none",
+    builtin_variables = "none",
   },
   -- Override colors
   colors = {
