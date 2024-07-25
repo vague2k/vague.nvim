@@ -2,9 +2,7 @@
 
 vague is a dark, low contrast theme inspired [ThePrimeagen](https://github.com/ThePrimeagen)'s use of [tokyonight](https://github.com/folke/tokyonight.nvim) without fixing [tmux](https://github.com/tmux/tmux)'s colors.
 
-Here's a preview of what that looks like in golang
-
-<img width="1446" alt="Screenshot 2024-07-12 at 10 14 43 PM" src="https://github.com/user-attachments/assets/a9c9894c-f83c-4f4f-a65c-55e257692c5a">
+![vague-compare](https://github.com/user-attachments/assets/3d97f7c0-72a1-4f70-a129-304d8d2b97eb)
 
 ## Installation
 
@@ -27,18 +25,32 @@ require("vague").setup({
   transparent = false, -- don't set background
   style = {
     -- "none" is the same thing as default. But "italic" and "bold" are also valid options
+    boolean = "none",
+    number = "none",
+    float = "none",
+    error = "none",
     comments = "italic",
     conditionals = "none",
     functions = "none",
-    keywords = "none",
-    headings = "bold", -- markdown headings
+    headings = "bold",
     operators = "none",
-    keyword_return = "none",
     strings = "italic",
     variables = "none",
+
+    -- keywords
+    keywords = "none",
+    keyword_return = "none",
+    keywords_loop = "none",
+    keywords_label = "none",
+    keywords_exception = "none",
+
+    -- builtin
+    builtin_constants = "none",
+    builtin_functions = "none",
+    builtin_types = "none",
+    builtin_variables = "none",
   },
-  -- These are the default colors, but they are overideable.
-  -- Different highlights which may be non related share some colors, so expirement.
+  -- Override colors
   colors = {
     bg = "#18191a",
     fg = "#cdcdcd",
@@ -47,9 +59,9 @@ require("vague").setup({
     comment = "#646477",
     builtin = "#bad1ce",
     func = "#be8c8c",
-    string = "#d7b797",
+    string = "#deb896",
     number = "#d2a374",
-    property = "#b4b4ce",
+    property = "#c7c7d4",
     constant = "#b4b4ce",
     parameter = "#b9a3ba",
     visual = "#363738",
@@ -60,10 +72,9 @@ require("vague").setup({
     keyword = "#7894ab",
     type = "#a1b3b9",
     search = "#465362",
-    -- used mostly in git related highlights
     plus = "#8faf77",
     delta = "#e6be8c",
-  }
+  },
 })
 ```
 
