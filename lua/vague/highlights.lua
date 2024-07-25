@@ -92,38 +92,38 @@ hl.common = {
 }
 
 hl.syntax = {
-  Boolean = { fg = c.number }, -- boolean constants
+  Boolean = { fg = c.number, gui = config.style.boolean }, -- boolean constants
   Character = { fg = c.string }, -- character constants
   Comment = { fg = c.comment, gui = config.style.comments }, -- comments
   Constant = { fg = c.constant }, -- (preferred) any constant
   Delimiter = { fg = c.fg }, -- delimiter characters
-  Float = { fg = c.number }, -- float constants
+  Float = { fg = c.number, gui = config.style.float }, -- float constants
   Function = { fg = c.func, gui = config.style.functions }, -- functions
-  Error = { fg = c.error, gui = "bold" }, -- (preferred) any erroneous construct
-  Exception = { fg = c.error }, -- 'try', 'catch', 'throw'
+  Error = { fg = c.error, gui = config.style.error }, -- (preferred) any erroneous construct
+  Exception = { fg = c.keyword, gui = config.style.keywords_exception }, -- 'try', 'catch', 'throw'
   Identifier = { fg = c.constant, gui = config.style.variables }, -- (preferred) any variable
   Keyword = { fg = c.keyword, gui = config.style.keywords }, -- any other keyword
   Conditional = { fg = c.keyword, gui = config.style.conditionals }, -- conditionals
-  -- Repeat = { fg = c.preproc, gui = config.code_style.keywords }, -- loop keywords: 'for', 'while' etc
-  -- Label = { fg = c.preproc }, -- 'case', 'default', etc
-  Number = { fg = c.number }, -- number constant
+  Repeat = { fg = c.keyword, gui = config.style.keywords_loop }, -- loop keywords: 'for', 'while' etc
+  Label = { fg = c.keyword, gui = config.style.keywords_label }, -- 'case', 'default', etc
+  Number = { fg = c.number, gui = config.style.number }, -- number constant
   Operator = { fg = c.operator, gui = config.style.operators }, -- '+', '*', 'sizeof' etc
   PreProc = { fg = c.constant }, -- (preferred) generic preprocessor
-  -- Define = { fg = c.comment }, -- preprocessor '#define'
-  -- Include = { fg = c.keyword, gui = config.code_style.keywords }, -- preprocessor '#include'
-  -- Macro = { fg = c.constant, gui = config.code_style.constants }, -- macros
-  -- PreCondit = { fg = c.comment }, -- preprocessor conditionals '#if', '#endif' etc
+  Define = { fg = c.comment }, -- preprocessor '#define'
+  Include = { fg = c.keyword }, -- preprocessor '#include'
+  Macro = { fg = c.constant }, -- macros
+  PreCondit = { fg = c.comment }, -- preprocessor conditionals '#if', '#endif' etc
   Special = { fg = c.builtin }, -- (preferred) any special symbol
   SpecialChar = { fg = c.keyword }, -- special character in a constant
-  -- SpecialComment = { fg = c.keyword, gui = config.code_style.comments }, -- special things inside comments
-  -- Tag = { fg = c.builtin }, -- can use <C-]> on this
+  SpecialComment = { fg = c.keyword }, -- special things inside comments
+  Tag = { fg = c.builtin }, -- can use <C-]> on this
   Statement = { fg = c.keyword }, -- (preferred) any statement
   String = { fg = c.string, gui = config.style.strings }, -- string constants
   Title = { fg = c.property },
   Type = { fg = c.type }, -- (preferred) 'int', 'long', 'char' etc
-  -- StorageClass = { fg = c.constant, gui = config.code_style.keywords }, -- 'static', 'volatile' etc
-  -- Structure = { fg = c.constant }, -- 'struct', 'union', 'enum' etc
-  -- Typedef = { fg = c.constant }, -- 'typedef'
+  StorageClass = { fg = c.constant }, -- 'static', 'volatile' etc
+  Structure = { fg = c.constant }, -- 'struct', 'union', 'enum' etc
+  Typedef = { fg = c.constant }, -- 'typedef'
   Todo = { fg = c.func, gui = config.style.comments }, -- (preferred) 'TODO' keywords in comments
 }
 
