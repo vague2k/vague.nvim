@@ -2,16 +2,26 @@ local M = {}
 ---@alias CodeStyle "none"|"italic"|"bold"
 
 ---@class VagueConfig.style
+---@field boolean? CodeStyle
+---@field number? CodeStyle -- number constants
+---@field float? CodeStyle -- floating point numbers
+---@field error? CodeStyle -- any erroneous construct
 ---@field comments? CodeStyle
 ---@field conditionals? CodeStyle
----@field functions? CodeStyle
----@field keywords? CodeStyle
----@field headings? CodeStyle
----@field operators? CodeStyle
----@field keyword_return? CodeStyle
+---@field functions? CodeStyle -- function name
+---@field headings? CodeStyle -- markdown headings
+---@field operators? CodeStyle -- like "+"
 ---@field strings? CodeStyle
 ---@field variables? CodeStyle
----@field builtin_constants? CodeStyle
+---@field keywords? CodeStyle
+---@field keyword_return? CodeStyle
+---@field keywords_loop? CodeStyle -- "for", "while", etc
+---@field keywords_label? CodeStyle -- "default", "case", etc
+---@field keywords_exception? CodeStyle -- "try", "catch", etc
+---@field builtin_constants? CodeStyle -- like "nil" in lua and golang
+---@field builtin_functions? CodeStyle -- like "nil" in lua and golang
+---@field builtin_types? CodeStyle -- like "nil" in lua and golang
+---@field builtin_variables? CodeStyle -- like "this", "self"
 
 ---@class VagueConfig.colors
 ---@field bg? string
@@ -47,16 +57,30 @@ local DEFAULT_SETTINGS = {
   transparent = false, -- don't set background
   style = {
     -- "none" is the same thing as default. But "italic" and "bold" are also valid options
+    boolean = "none",
+    number = "none",
+    float = "none",
+    error = "none",
     comments = "italic",
     conditionals = "none",
     functions = "none",
-    keywords = "none",
-    headings = "bold", -- markdown headings
+    headings = "bold",
     operators = "none",
-    keyword_return = "none",
     strings = "italic",
     variables = "none",
+
+    -- keywords
+    keywords = "none",
+    keyword_return = "none",
+    keywords_loop = "none",
+    keywords_label = "none",
+    keywords_exception = "none",
+
+    -- builtin
     builtin_constants = "none",
+    builtin_functions = "none",
+    builtin_types = "none",
+    builtin_variables = "none",
   },
   -- Override colors
   colors = {
