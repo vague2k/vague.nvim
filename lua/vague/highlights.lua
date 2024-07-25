@@ -134,46 +134,45 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     ["@variable.builtin"] = { fg = c.builtin, gui = config.style.builtin_variables }, -- variable names that are defined by the language, like 'this' or 'self'
     ["@variable.member"] = { fg = c.builtin }, -- fields
     ["@variable.parameter"] = { fg = c.parameter }, -- parameters of a function
-    -- ["@variable.field"] = { fg = c.builtin }, -- fields
 
-    -- ["@constant"] = { link = "Constant" }, -- constants
-    ["@constant.builtin"] = { fg = c.builtin, gui = config.style.builtin_constants }, -- constants that are defined by the language, like 'nil' in lua
-    -- ["@constant.macro"] = { link = "Macro" }, -- constants that are defined by macros like 'NULL' in c
+    ["@constant"] = hl.syntax["Constant"], -- constants
+    ["@constant.builtin"] = { fg = c.number, gui = config.style.builtin_constants }, -- constants that are defined by the language, like 'nil' in lua
+    ["@constant.macro"] = hl.syntax["Macro"], -- constants that are defined by macros like 'NULL' in c
 
-    -- ["@label"] = { link = "Label" }, -- labels
-    ["@module"] = hl.syntax["Type"], -- modules and namespaces
+    ["@label"] = hl.syntax["Label"], -- labels
+    ["@module"] = hl.syntax["Constant"], -- modules and namespaces
 
     -- literals
-    -- ["@string"] = { link = "String" }, -- strings
-    ["@string.documentation"] = hl.syntax["String"] or hl.syntax["Comment"], -- doc strings
+    ["@string"] = hl.syntax["String"], -- strings
+    ["@string.documentation"] = hl.syntax["Comment"], -- doc strings
     ["@string.regexp"] = hl.syntax["SpecialChar"], -- regex
     ["@string.escape"] = hl.syntax["SpecialChar"], -- escape characters within string
     ["@string.special.symbol"] = hl.syntax["Identifier"],
-    -- ["@string.special.url"] = { fg = c.func }, -- urls, links, emails
+    ["@string.special.url"] = { fg = c.func }, -- urls, links, emails
 
-    -- ["@character"] = { link = "String" }, -- character literals
-    -- ["@character.special"] = hl.syntax["SpecialChar"], -- special characters
+    ["@character"] = hl.syntax["String"], -- character literals
+    ["@character.special"] = hl.syntax["SpecialChar"], -- special characters
 
-    -- ["@boolean"] = { link = "Constant" }, -- booleans
-    -- ["@number"] = { link = "Number" }, -- all numbers
-    -- ["@number.float"] = { link = "Number" }, -- floats
+    ["@boolean"] = hl.syntax["Boolean"], -- booleans
+    ["@number"] = hl.syntax["Number"], -- all numbers
+    ["@number.float"] = hl.syntax["Float"], -- floats
 
     -- types
-    -- ["@type"] = hl.syntax["Type"], -- types
+    ["@type"] = hl.syntax["Type"], -- types
     ["@type.builtin"] = { fg = c.builtin, gui = config.style.builtin_types }, --builtin types
-    -- ["@type.definition"] = hl.syntax["Typedef"], -- typedefs
-    -- ["@type.qualifier"]
+    ["@type.definition"] = hl.syntax["Typedef"], -- typedefs
+    ["@type.declaration"] = { fg = c.constant },
 
     ["@attribute"] = hl.syntax["Constant"], -- attributes, like <decorators> in python
-    -- ["@property"] = { fg = c.property }, --same as TSField
+    ["@property"] = { fg = c.property }, --same as TSField
 
     -- functions
-    -- ["@function"] = { link = "Function" }, -- functions
-    ["@function.builtin"] = { fg = c.builtin, gui = config.style.builtin_functions }, --builtin functions
-    -- ["@function.macro"] = { link = "Macro" }, -- macro defined functions
-    -- ["@function.call"]
-    -- ["@function.method"]
-    -- ["@function.method.call"]
+    ["@function"] = hl.syntax["Function"], -- functions
+    ["@function.builtin"] = { fg = c.func, gui = config.style.builtin_functions }, --builtin functions
+    ["@function.macro"] = hl.syntax["Macro"], -- macro defined functions
+    ["@function.call"] = { fg = c.parameter },
+    ["@function.method"] = { fg = c.func },
+    ["@function.method.call"] = { fg = c.type },
 
     ["@constructor"] = { fg = c.constant, gui = config.style.functions }, -- constructor calls and definitions
     ["@constructor.lua"] = { fg = c.type, gui = config.style.functions }, -- constructor calls and definitions, `= { }` in lua
@@ -186,22 +185,11 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     ["@keyword.conditional"] = { fg = c.keyword, gui = config.style.conditionals }, -- keywords for conditional statements
     ["@keyword.operator"] = { fg = c.keyword, gui = config.style.operators }, -- keyword operator (eg, 'in' in python)
     ["@keyword.return"] = { fg = c.keyword, gui = config.style.keyword_return }, -- keywords used to define a function
-    -- ["@keyword.builtin"] = hl.syntax["Type"], -- keywords used to define a function
-    -- ["@keyword.function"] = hl.syntax["Function"], -- keywords used to define a function
-    -- ["@keyword.import"] = hl.syntax["Include"], -- includes, like '#include' in c, 'require' in lua
-    -- ["@keyword.storage"] = hl.syntax["StorageClass"], -- visibility/life-time 'static'
-    -- ["@keyword.repeat"] = hl.syntax["Repeat"], -- for keywords related to loops
 
     -- punctuation
     ["@punctuation.delimiter"] = { fg = c.fg }, -- delimiters, like `; . , `
     ["@punctuation.bracket"] = { fg = c.fg }, -- brackets and parentheses
     ["@punctuation.special"] = hl.syntax["SpecialChar"], -- punctuation that does not fall into above categories, like `{}` in string interpolation
-
-    -- comment
-    -- ["@comment"]
-    -- ["@comment.error"]
-    -- ["@comment.warning"]
-    -- ["@comment.note"]
 
     -- markup
     ["@markup"] = { fg = c.fg }, -- text in markup language
@@ -232,35 +220,38 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
 
   if vim.api.nvim_call_function("has", { "nvim-0.9" }) == 1 then
     hl.lsp = {
-      -- ["@lsp.type.class"] = { link = "Structure" },
+      -- If you are seeing this comment, and would like to contribute, specifically to the semantic tokens highlighting,
+      -- See the semantic token classification, I find this article very useful
+      -- https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide#semantic-token-classification
+
+      -- types
+      ["@lsp.type.class"] = hl.syntax["Structure"],
       ["@lsp.type.comment"] = hl.syntax["Comment"],
-      -- ["@lsp.type.enum"] = { link = "Structure" },
-      -- ["@lsp.type.enumMember"] = { link = "Constant" },
-      -- ["@lsp.type.interface"] = { link = "Structure" },
-      -- ["@lsp.type.typeParameter"] = { link = "Typedef" },
+      ["@lsp.type.enum"] = hl.syntax["Structure"],
+      ["@lsp.type.enumMember"] = hl.treesitter["@variable.member"],
+      ["@lsp.type.interface"] = hl.syntax["Structure"],
+      ["@lsp.type.typeParameter"] = hl.syntax["Typedef"],
       ["@lsp.type.namespace"] = hl.treesitter["@module"],
       ["@lsp.type.parameter"] = hl.treesitter["@variable.parameter"],
-      -- ["@lsp.type.property"] = { link = "Identifier" },
-      -- ["@lsp.type.variable"] = hl.treesitter["@variable"],
-      -- ["@lsp.type.macro"] = { link = "Macro" },
-      -- ["@lsp.type.method"] = { link = "@function.method" },
-      -- ["@lsp.type.generic"] = { link = "Type" },
-      -- ["@lsp.type.builtinType"] = { link = "Special" },
+      ["@lsp.type.property"] = hl.treesitter["@type"],
+      ["@lsp.type.variable"] = hl.treesitter["@constant"],
+      ["@lsp.type.macro"] = hl.syntax["Macro"],
+      ["@lsp.type.method"] = hl.treesitter["@function.method"],
+      ["@lsp.type.function"] = hl.treesitter["@function.call"],
+      ["@lsp.type.generic"] = hl.treesitter["@type"],
+      ["@lsp.type.builtinType"] = hl.treesitter["@type.builtin"],
       ["@lsp.type.selfParameter"] = hl.syntax["Special"],
-      ["@lsp.type.builtinConstant"] = hl.syntax["Special"],
-      ["@lsp.typemod.method.defaultLibrary"] = hl.syntax["Special"],
-      ["@lsp.typemod.function.defaultLibrary"] = hl.syntax["Special"],
-      ["@lsp.typemod.function.builtin"] = hl.syntax["Special"],
-      ["@lsp.typemod.operator.injected"] = hl.syntax["Operator"],
-      ["@lsp.typemod.string.injected"] = hl.syntax["String"],
-      ["@lsp.typemod.variable.injected"] = hl.treesitter["@variable"],
-      ["@lsp.typemod.variable.defaultLibrary"] = hl.syntax["Special"],
-      ["@lsp.typemod.variable.static"] = hl.syntax["Constant"],
-      ["@lsp.typemod.variable.global"] = hl.syntax["Constant"],
-      ["@lsp.typemod.operator.controlFlow"] = hl.treesitter["@keyword.exception"],
-      ["@lsp.typemod.keyword.documentation"] = hl.syntax["Special"],
-      ["@lsp.mod.readonly"] = hl.syntax["Constant"],
-      ["@lsp.mod.typeHint"] = hl.syntax["Type"],
+      ["@lsp.type.builtinConstant"] = hl.treesitter["@constant.builtin"],
+
+      -- type function modifiers
+      ["@lsp.typemod.function"] = hl.treesitter["@function.call"],
+      ["@lsp.typemod.function.defaultLibrary"] = hl.treesitter["@function.builtin"],
+      ["@lsp.typemod.function.builtin"] = hl.treesitter["@function.builtin"],
+      ["@lsp.typemod.function.definition"] = hl.treesitter["@function"],
+
+      -- type variable modifiers
+      ["@lsp.typemod.variable.defaultLibrary"] = hl.treesitter["@constant.builtin"],
+      ["@lsp.typemod.variable.definition"] = hl.treesitter["@property"],
     }
   end
 end
@@ -297,6 +288,8 @@ hl.plugins.cmp = {
   CmpItemAbbrMatchFuzzy = { fg = c.keyword, gui = "underline" },
   CmpItemMenu = { fg = c.comment },
   CmpItemKind = { fg = c.comment },
+  CmpItemKindFunction = { fg = c.func },
+  CmpItemKindInterfaceDefault = { fg = c.type },
 }
 
 hl.plugins.gitsigns = {
