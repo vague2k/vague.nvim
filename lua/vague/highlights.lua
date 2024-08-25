@@ -204,7 +204,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     ["@markup.list"] = { fg = c.func },
     ["@markup.list.checked"] = { fg = c.func }, -- todo checked
     ["@markup.list.unchecked"] = { fg = c.func }, -- todo unchecked
-    ["@markup.raw"] = { fg = c.func }, -- inline code in markdown
+    ["@markup.raw"] = { fg = c.constant }, -- inline code in markdown
     ["@markup.math"] = { fg = c.string }, -- math environments, like `$$` in latex
 
     -- diff
