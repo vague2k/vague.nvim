@@ -324,7 +324,7 @@ hl.plugins.telescope = {
   TelescopeBorder = { fg = c.floatBorder },
   TelescopeMatching = { fg = c.delta, gui = "bold" },
   TelescopePromptPrefix = { fg = c.constant },
-  TelescopeSelection = { fg = c.constant, bg = c.bg },
+  TelescopeSelection = { fg = c.constant, bg = c.line },
   TelescopeSelectionCaret = { fg = c.type },
   TelescopeResultsNormal = { fg = c.fg },
 }
