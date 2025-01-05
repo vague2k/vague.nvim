@@ -61,7 +61,7 @@ hl.common = {
   ModeMsg = { fg = c.string },
   Pmenu = { fg = c.fg, bg = c.visual },
   PmenuSbar = { fg = c.none, bg = c.visual },
-  PmenuSel = { bg = c.bg },
+  PmenuSel = { fg = c.fg, bg = c.visual },
   PmenuThumb = { fg = c.none, bg = c.visual },
   Question = { fg = c.constant },
   QuickFixLine = { fg = c.func, gui = "underline" },
