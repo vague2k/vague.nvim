@@ -44,7 +44,7 @@ hl.common = {
   DiffIndexLine = { fg = c.comment },
   Directory = { fg = c.hint },
   ErrorMsg = { fg = c.error, gui = "bold" },
-  EndOfBuffer = { c.comment or c.bg },
+  EndOfBuffer = { fg = c.comment or c.bg },
   FloatBorder = { fg = c.floatBorder, bg = config.transparent and c.none or c.bg },
   FloatTitle = { fg = c.floatBorder, bg = config.transparent and c.none or c.bg },
   FloatFooter = { fg = c.floatBorder, bg = config.transparent and c.none or c.bg },
