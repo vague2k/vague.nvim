@@ -59,10 +59,10 @@ hl.common = {
   Normal = { fg = c.fg, bg = config.transparent and c.none or c.bg },
   NormalFloat = { fg = c.fg, bg = config.transparent and c.none or c.bg },
   ModeMsg = { fg = c.string },
-  Pmenu = { fg = c.fg, bg = c.visual },
-  PmenuSbar = { fg = c.none, bg = c.visual },
-  PmenuSel = { fg = c.fg, bg = c.visual },
-  PmenuThumb = { fg = c.none, bg = c.visual },
+  Pmenu = { fg = c.fg, bg = c.bg },
+  PmenuSel = { fg = c.bg, bg = c.keyword },
+  PmenuSbar = { fg = c.visual, bg = c.comment },
+  PmenuThumb = { fg = c.comment, bg = c.visual },
   Question = { fg = c.constant },
   QuickFixLine = { fg = c.func, gui = "underline" },
   Search = { fg = c.fg, bg = c.search or c.visual },
@@ -88,7 +88,7 @@ hl.common = {
   WarningMsg = { fg = c.warning, gui = "bold" },
   Whitespace = { fg = c.comment },
   WildMenu = { fg = c.bg, bg = c.func },
-  WinSeparator = { fg = c.border },
+  WinSeparator = { fg = c.floatBorder },
 }
 
 hl.syntax = {
@@ -282,14 +282,25 @@ hl.plugins.lsp = {
 }
 
 hl.plugins.cmp = {
-  CmpItemAbbr = { fg = c.fg },
-  CmpItemAbbrDeprecated = { fg = c.comment, gui = "strikethrough" },
+  CmpKind = { fg = c.comment },
+  CmpGhostText = { fg = c.comment },
+  CmpItemAbbr = { fg = c.fg, bg = c.none },
   CmpItemAbbrMatch = { fg = c.keyword },
-  CmpItemAbbrMatchFuzzy = { fg = c.keyword, gui = "underline" },
-  CmpItemMenu = { fg = c.comment },
-  CmpItemKind = { fg = c.comment },
-  CmpItemKindFunction = { fg = c.func },
-  CmpItemKindInterfaceDefault = { fg = c.type },
+  CmpItemAbbrMatchFuzzy = { fg = c.keyword },
+  CmpItemAbbrDeprecated = { fg = c.error, bg = c.none, strikethrough = true },
+  CmpItemMenu = hl.common["Pmenu"],
+}
+
+hl.plugins.blink_cmp = {
+  BlinkCmpKind = { fg = c.comment },
+  BlinkCmpGhostText = { fg = c.comment },
+  BlinkCmpLabel = { fg = c.fg, bg = c.none },
+  BlinkCmpLabelMatch = { fg = c.keyword },
+  BlinkCmpLabelDeprecated = { fg = c.error, bg = c.none, strikethrough = true },
+  BlinkCmpMenu = hl.common["Pmenu"],
+  BlinkCmpMenuBorder = { fg = c.floatBorder, bg = c.none },
+  BlinkCmpDocBorder = { fg = c.floatBorder, bg = c.none },
+  BlinkCmpSignatureHelpBorder = { fg = c.floatBorder, bg = c.none },
 }
 
 hl.plugins.gitsigns = {
