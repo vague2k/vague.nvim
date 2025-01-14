@@ -1,8 +1,10 @@
 ![vague-banner](https://github.com/user-attachments/assets/788de8f0-a397-448b-bdf3-4881e2f5e979)
 
-vague is a dark, low contrast theme inspired [ThePrimeagen](https://github.com/ThePrimeagen)'s use of [tokyonight](https://github.com/folke/tokyonight.nvim) without fixing [tmux](https://github.com/tmux/tmux)'s colors.
+vague is a cool, dark, low contrast theme inspired by [ThePrimeagen](https://github.com/ThePrimeagen)'s use of [rose-pine](https://github.com/rose-pine/neovim) without fixing [tmux](https://github.com/tmux/tmux)'s colors.
 
-![vague-compare](https://github.com/user-attachments/assets/3d97f7c0-72a1-4f70-a129-304d8d2b97eb)
+### Below is a preview/comparison of the theme
+![vague](https://github.com/user-attachments/assets/58042519-07c9-44ff-9f42-a40c26f64831)
+![prime](https://github.com/user-attachments/assets/48a02ad7-3679-4214-89dd-1d7803a878db)
 
 ## Installation
 
