@@ -84,7 +84,7 @@ local DEFAULT_SETTINGS = {
   },
   -- Override colors
   colors = {
-    bg = "#171819",
+    bg = "#151516",
     fg = "#cdcdcd",
     floatBorder = "#878787",
     line = "#252530",
