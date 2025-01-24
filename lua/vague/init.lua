@@ -1,9 +1,9 @@
-local config = require("vague.config")
+local internal_conf = require("vague.config.internal")
 local M = {}
 
----@param user_opts? VagueConfig
+---@param user_opts? VagueColorscheme.Config
 M.setup = function(user_opts)
-  if user_opts then config.set(user_opts) end
+  if user_opts then internal_conf.set(user_opts) end
 end
 
 --- Under the hood, |:colorscheme| is just using |:highlight GroupName ...| over every highlight group it knows about.
