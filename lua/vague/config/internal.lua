@@ -52,7 +52,7 @@ local DEFAULT_SETTINGS = {
   ---@class VagueColorscheme.InternalConfig.colors
   colors = {
     ---@type string
-    bg = "#151516",
+    bg = "#141415",
     ---@type string
     fg = "#cdcdcd",
     ---@type string
