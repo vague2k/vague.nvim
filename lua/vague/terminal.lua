@@ -1,7 +1,8 @@
-local c = require("vague.colors")
+local curr_internal_conf = require("vague.config.internal").current
 local M = {}
 
 M.set_highlights = function()
+  local c = curr_internal_conf.colors
   vim.g.terminal_color_0 = c.bg -- black
   vim.g.terminal_color_1 = c.error -- red
   vim.g.terminal_color_2 = c.plus -- green
