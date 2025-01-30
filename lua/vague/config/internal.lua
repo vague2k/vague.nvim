@@ -75,6 +75,13 @@ local DEFAULT_SETTINGS = {
       ---@type string
       diagnostic_warn = "bold",
     },
+    ---@class VagueColorscheme.InternalConfig.plugins.neotest
+    neotest = {
+      ---@type string
+      focused = "bold",
+      ---@type string
+      adapter_name = "bold",
+    },
     ---@class VagueColorscheme.InternalConfig.plugins.telescope
     telescope = {
       ---@type string

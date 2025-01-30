@@ -48,6 +48,10 @@
 
 ---@class VagueColorscheme.plugins.telescope
 ---@field match? CodeStyle -- matching text for telescope
+---
+---@class VagueColorscheme.plugins.neotest
+---@field focused? CodeStyle -- style for the current focused test
+---@field adapter_name? CodeStyle
 
 ---@class VagueColorscheme.plugins.lsp
 ---@field diagnostic_error? CodeStyle -- lsp diagnostic error text
@@ -55,7 +59,6 @@
 ---@field diagnostic_info? CodeStyle -- lsp diagnostic info text
 ---@field diagnostic_warn? CodeStyle -- lsp diagnostic warn text
 
----
 ---@class VagueColorscheme.plugins
 ---@field cmp? VagueColorscheme.plugins.cmp
 ---@field telescope? VagueColorscheme.plugins.telescope
