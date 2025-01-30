@@ -3,6 +3,7 @@
 vague is a cool, dark, low contrast theme inspired by [ThePrimeagen](https://github.com/ThePrimeagen)'s use of [rose-pine](https://github.com/rose-pine/neovim) without fixing [tmux](https://github.com/tmux/tmux)'s colors.
 
 ### Below is a preview/comparison of the theme
+
 ![vague](https://github.com/user-attachments/assets/58042519-07c9-44ff-9f42-a40c26f64831)
 ![prime](https://github.com/user-attachments/assets/48a02ad7-3679-4214-89dd-1d7803a878db)
 
@@ -27,10 +28,10 @@ require("vague").setup({
   transparent = false, -- don't set background
   style = {
     -- "none" is the same thing as default. But "italic" and "bold" are also valid options
-    boolean = "none",
+    boolean = "bold",
     number = "none",
     float = "none",
-    error = "none",
+    error = "bold",
     comments = "italic",
     conditionals = "none",
     functions = "none",
@@ -41,60 +42,71 @@ require("vague").setup({
 
     -- keywords
     keywords = "none",
-    keyword_return = "none",
+    keyword_return = "italic",
     keywords_loop = "none",
     keywords_label = "none",
     keywords_exception = "none",
 
     -- builtin
-    builtin_constants = "none",
+    builtin_constants = "bold",
     builtin_functions = "none",
-    builtin_types = "none",
+    builtin_types = "bold",
     builtin_variables = "none",
+  },
+  -- plugin styles where applicable
+  -- make an issue/pr if you'd like to see more styling options!
+  plugins = {
+    cmp = {
+      match = "bold",
+      match_fuzzy = "bold",
+    },
+    dashboard = {
+      footer = "italic",
+    },
+    lsp = {
+      diagnostic_error = "bold",
+      diagnostic_hint = "none",
+      diagnostic_info = "italic",
+      diagnostic_warn = "bold",
+    },
+    neotest = {
+      focused = "bold",
+      adapter_name = "bold",
+    },
+    telescope = {
+      match = "bold",
+    },
   },
   -- Override colors
   colors = {
-    bg = "#18191a",
+    bg = "#141415",
     fg = "#cdcdcd",
     floatBorder = "#878787",
-    line = "#282830",
-    comment = "#646477",
-    builtin = "#bad1ce",
-    func = "#be8c8c",
-    string = "#deb896",
-    number = "#d2a374",
-    property = "#c7c7d4",
-    constant = "#b4b4ce",
-    parameter = "#b9a3ba",
-    visual = "#363738",
-    error = "#d2788c",
-    warning = "#e6be8c",
-    hint = "#8ca0dc",
-    operator = "#96a3b2",
-    keyword = "#7894ab",
-    type = "#a1b3b9",
-    search = "#465362",
-    plus = "#8faf77",
-    delta = "#e6be8c",
+    line = "#252530",
+    comment = "#606079",
+    builtin = "#b4d4cf",
+    func = "#c48282",
+    string = "#e8b589",
+    number = "#e0a363",
+    property = "#c3c3d5",
+    constant = "#aeaed1",
+    parameter = "#bb9dbd",
+    visual = "#333738",
+    error = "#df6882",
+    warning = "#f3be7c",
+    hint = "#7e98e8",
+    operator = "#90a0b5",
+    keyword = "#6e94b2",
+    type = "#9bb4bc",
+    search = "#405065",
+    plus = "#8cb66d",
+    delta = "#f3be7c",
   },
 })
 ```
-
-## Acknowledgements
-
-The structure of this code was shamelessly ripped off [neomodern](https://github.com/cdmill/neomodern.nvim) of which I used it's roseprime colorscheme for a very long time. I'd highly suggest you check it out.
 
 ## Contributing
 
 PR's are welcome and encouraged.
 
-If you would like to propose support for a specific plugin, you can make a PR with your modifications to [this file](https://github.com/vague2k/vague.nvim/blob/main/lua/vague/highlights.lua)
-
-## Supported plugins
-
-- [cmp](https://github.com/hrsh7th/nvim-cmp)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-- [Dashboard](https://github.com/nvimdev/dashboard-nvim)
-- [Neotest](https://github.com/nvim-neotest/neotest)
+If you would like to propose support for a specific plugin, you can make a PR with your modifications to the `lua/vague/groups` directory
