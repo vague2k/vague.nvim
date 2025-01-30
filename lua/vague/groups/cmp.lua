@@ -12,8 +12,8 @@ M.get_colors = function(conf)
     CmpGhostText          = { fg = c.comment },                                   -- ghost text for completion
     CmpItemAbbr           = { fg = c.fg, bg = "none" },                           -- abbreviation in completion menu
     CmpItemAbbrDeprecated = { fg = c.error, bg = "none", strikethrough = true },  -- deprecated items in completion menu
-    CmpItemAbbrMatch      = { fg = c.keyword },                                   -- matched text in completion menu
-    CmpItemAbbrMatchFuzzy = { fg = c.keyword },                                   -- fuzzy-matched text in completion menu
+    CmpItemAbbrMatch      = { fg = c.delta, gui = conf.plugins.cmp.match },       -- matched text in completion menu
+    CmpItemAbbrMatchFuzzy = { fg = c.delta, gui = conf.plugins.cmp.match_fuzzy }, -- fuzzy-matched text in completion menu
     CmpItemMenu           = common["Pmenu"],                                      -- menu for completion items
     CmpKind               = { fg = c.comment },                                   -- kind of completion item
   }

@@ -49,6 +49,38 @@ local DEFAULT_SETTINGS = {
     ---@type string
     builtin_variables = "none",
   },
+
+  ---@class VagueColorscheme.InternalConfig.plugins
+  plugins = {
+    ---@class VagueColorscheme.InternalConfig.plugins.cmp
+    cmp = {
+      ---@type string
+      match = "bold",
+      ---@type string
+      match_fuzzy = "bold",
+    },
+    ---@class VagueColorscheme.InternalConfig.plugins.dashboard
+    dashboard = {
+      ---@type string
+      footer = "italic",
+    },
+    ---@class VagueColorscheme.InternalConfig.plugins.lsp
+    lsp = {
+      ---@type string
+      diagnostic_error = "bold",
+      ---@type string
+      diagnostic_hint = "none",
+      ---@type string
+      diagnostic_info = "italic",
+      ---@type string
+      diagnostic_warn = "bold",
+    },
+    ---@class VagueColorscheme.InternalConfig.plugins.telescope
+    telescope = {
+      ---@type string
+      match = "bold",
+    },
+  },
   ---@class VagueColorscheme.InternalConfig.colors
   colors = {
     ---@type string

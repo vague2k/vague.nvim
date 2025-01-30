@@ -47,7 +47,7 @@ M.get_colors = function(conf)
     NormalFloat      = { fg = c.fg, bg = conf.transparent and "none" or c.bg },
     ModeMsg          = { fg = c.string },
     Pmenu            = { fg = c.fg, bg = c.bg },
-    PmenuSel         = { fg = c.bg, bg = c.keyword },
+    PmenuSel         = { fg = c.constant, bg = c.line },
     PmenuSbar        = { fg = c.visual, bg = c.comment },
     PmenuThumb       = { fg = c.comment, bg = c.visual },
     Question         = { fg = c.constant },

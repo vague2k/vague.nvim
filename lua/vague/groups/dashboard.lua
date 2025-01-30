@@ -7,10 +7,10 @@ M.get_colors = function(conf)
 
   -- stylua: ignore
   local hl = {
-    DashboardShortCut = { fg = c.constant },
-    DashboardHeader   = { fg = c.keyword },
-    DashboardCenter   = { fg = c.fg },
-    DashboardFooter   = { fg = c.parameter, gui = "italic" },
+    DashboardShortCut = { fg = c.parameter },
+    DashboardHeader   = { fg = c.constant },
+    DashboardCenter   = { fg = c.constant },
+    DashboardFooter   = { fg = c.delta, gui = conf.plugins.dashboard.footer},
   }
 
   return hl

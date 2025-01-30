@@ -39,6 +39,29 @@
 ---@field builtin_types? CodeStyle -- like "nil" in lua and golang
 ---@field builtin_variables? CodeStyle -- like "this", "self"
 
+---@class VagueColorscheme.plugins.cmp
+---@field match? CodeStyle -- matching text for cmp plugins
+---@field match_fuzzy? CodeStyle -- fuzzy matching text for cmp plugins
+
+---@class VagueColorscheme.plugins.dashboard
+---@field footer? CodeStyle
+
+---@class VagueColorscheme.plugins.telescope
+---@field match? CodeStyle -- matching text for telescope
+
+---@class VagueColorscheme.plugins.lsp
+---@field diagnostic_error? CodeStyle -- lsp diagnostic error text
+---@field diagnostic_hint? CodeStyle -- lsp diagnostic hint text
+---@field diagnostic_info? CodeStyle -- lsp diagnostic info text
+---@field diagnostic_warn? CodeStyle -- lsp diagnostic warn text
+
+---
+---@class VagueColorscheme.plugins
+---@field cmp? VagueColorscheme.plugins.cmp
+---@field telescope? VagueColorscheme.plugins.telescope
+---@field dashboard? VagueColorscheme.plugins.telescope
+---@field lsp? VagueColorscheme.plugins.telescope
+
 ---@class VagueColorscheme.colors
 ---@field bg? string
 ---@field fg? string
