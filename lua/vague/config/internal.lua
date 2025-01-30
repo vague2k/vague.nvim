@@ -8,13 +8,13 @@ local DEFAULT_SETTINGS = {
   ---@class VagueColorscheme.InternalConfig.style
   style = {
     ---@type string
-    boolean = "none",
+    boolean = "bold",
     ---@type string
     number = "none",
     ---@type string
     float = "none",
     ---@type string
-    error = "none",
+    error = "bold",
     ---@type string
     comments = "italic",
     ---@type string
@@ -33,7 +33,7 @@ local DEFAULT_SETTINGS = {
     ---@type string
     keywords = "none",
     ---@type string
-    keyword_return = "none",
+    keyword_return = "italic",
     ---@type string
     keywords_loop = "none",
     ---@type string
@@ -41,11 +41,11 @@ local DEFAULT_SETTINGS = {
     ---@type string
     keywords_exception = "none",
 
-    builtin_constants = "none",
+    builtin_constants = "bold",
     ---@type string
     builtin_functions = "none",
     ---@type string
-    builtin_types = "none",
+    builtin_types = "bold",
     ---@type string
     builtin_variables = "none",
   },
