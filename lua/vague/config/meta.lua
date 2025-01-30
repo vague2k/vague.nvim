@@ -90,6 +90,7 @@
 ---@field transparent? boolean
 ---@field style? VagueColorscheme.style
 ---@field colors? VagueColorscheme.colors
+---@field plugins? VagueColorscheme.plugins
 
 ---@type VagueColorscheme.Config | fun():VagueColorscheme.Config | nil
 vim.g.vague_colorscheme = vim.g.vague_colorscheme
