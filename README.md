@@ -1,11 +1,8 @@
 ![vague-banner](https://github.com/user-attachments/assets/788de8f0-a397-448b-bdf3-4881e2f5e979)
 
+<img width="1582" alt="theme" src="https://github.com/user-attachments/assets/4424408e-812c-4976-a28b-f3e592e9514d" />
+
 vague is a cool, dark, low contrast theme inspired by [ThePrimeagen](https://github.com/ThePrimeagen)'s use of [rose-pine](https://github.com/rose-pine/neovim) without fixing [tmux](https://github.com/tmux/tmux)'s colors.
-
-### Below is a preview/comparison of the theme
-
-![vague](https://github.com/user-attachments/assets/58042519-07c9-44ff-9f42-a40c26f64831)
-![prime](https://github.com/user-attachments/assets/48a02ad7-3679-4214-89dd-1d7803a878db)
 
 ## Installation
 
@@ -104,6 +101,17 @@ require("vague").setup({
   },
 })
 ```
+
+## Explicitly Supported plugins
+
+- [Blink](https://github.com/Saghen/blink.cmp)
+- [Cmp](https://github.com/hrsh7th/nvim-cmp)
+- [Dashboard](https://github.com/nvimdev/dashboard-nvim)
+- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [Neotest](https://github.com/nvim-neotest/neotest)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 ## Contributing
 
