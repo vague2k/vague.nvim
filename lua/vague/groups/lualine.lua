@@ -12,9 +12,9 @@ M.get_colors = function(conf)
     color4 = c.property,
     color5 = c.line,
     color8 = c.string,
-    color9 = c.search,
-    color10 = "#0f1117",
-    color11 = "#17171b",
+    color9 = c.property,
+    color10 = "1c1c24",
+    color11 = c.bg,
     color12 = c.operator,
     color15 = c.delta,
   }
