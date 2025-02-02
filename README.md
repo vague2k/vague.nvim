@@ -112,6 +112,7 @@ require("vague").setup({
 - [Neotest](https://github.com/nvim-neotest/neotest)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ## Contributing
 
