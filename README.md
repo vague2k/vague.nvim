@@ -11,6 +11,7 @@ vague is a cool, dark, low contrast theme inspired by [ThePrimeagen](https://git
 {
   "vague2k/vague.nvim",
   config = function()
+    -- NOTE: you do not need to call setup if you don't want to.
     require("vague").setup({
       -- optional configuration here
     })
