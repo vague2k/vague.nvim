@@ -9,8 +9,8 @@ end
 -- SHOULD BE CALLED AFTER SETUP (unless using default colors)
 M.get_palette = function()
   local palette = {}
-  for _, color in pairs(internal_conf.current.colors) do
-    table.insert(palette, color)
+  for name, color in pairs(internal_conf.current.colors) do
+    palette[name] = color
   end
   return palette
 end
