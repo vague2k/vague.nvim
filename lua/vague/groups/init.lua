@@ -13,4 +13,5 @@ return {
   treesitter = require("vague.groups.treesitter").get_colors(curr_internal_conf),
   dashboard = require("vague.groups.dashboard").get_colors(curr_internal_conf),
   snacks_picker = require("vague.groups.snacks-picker").get_colors(curr_internal_conf),
+  snacks_input = require("vague.groups.snacks-input").get_colors(curr_internal_conf),
 }
