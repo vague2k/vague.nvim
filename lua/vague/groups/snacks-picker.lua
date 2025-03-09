@@ -25,6 +25,7 @@ M.get_colors = function(conf)
     SnacksPickerGitStatusUntracked = neotree["NeoTreeGitUntracked"],     -- color of untracked git items in a picker (usually explorer)
     SnacksPickerGitStatusAdded     = neotree["NeoTreeGitAdded"],         -- color of added git items in a picker (usually explorer)
     SnacksPickerGitStatusModified  = neotree["NeoTreeGitModified"],      -- color of modified git items in a picker (usually explorer)
+    SnacksPickerGitStatusStaged    = neotree["NeoTreeGitAdded"],         -- color of added git items in a picker (usually explorer)
   }
 
   return hl
