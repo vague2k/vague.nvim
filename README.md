@@ -117,6 +117,14 @@ require("vague").setup({
 - [Snacks](https://github.com/folke/snacks.nvim)
 - [Rainbow delimiters](https://github.com/hiphish/rainbow-delimiters.nvim)
 
+## Extras
+
+Extra color configs for [Ghostty](https://ghostty.org/),
+[Alacritty](https://github.com/alacritty/alacritty),
+[Kitty](https://sw.kovidgoyal.net/kitty) and [foot](https://codeberg.org/dnkl/foot) can be
+found in [extras](extras/). To use them, refer to their respective
+documentation.
+
 ## Contributing
 
 PR's are welcome and encouraged.

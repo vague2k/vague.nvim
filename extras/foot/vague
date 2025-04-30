@@ -1,0 +1,33 @@
+# Vague for Foot
+# -------------------
+# Theme Author: vague2k <ilovedrawing056@gmail.com>
+# Ported by:	skewb1k <skewb1kunix@gmail.com>
+# License:  	MIT License
+# Upstream: 	https://github.com/vague2k/vague.nvim/blob/main/extras/foot/vague
+
+[cursor]
+color=141415 cdcdcd
+
+[colors]
+background=141415
+foreground=cdcdcd
+
+regular0=141415
+regular1=df6882
+regular2=6e94b2
+regular3=f3be7c
+regular4=9bb4bc
+regular5=bb9dbd
+regular6=c48282
+regular7=cdcdcd
+
+bright0=606079
+bright1=e5869b
+bright2=8ba9c1
+bright3=f5cb96
+bright4=afc3c9
+bright5=c9b1ca
+bright6=d09b9b
+bright7=d7d7d7
+
+flash=f3be7c

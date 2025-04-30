@@ -1,0 +1,29 @@
+# Vague for Ghostty
+# -------------------
+# Theme Author: vague2k <ilovedrawing056@gmail.com>
+# Ported by:	skewb1k <skewb1kunix@gmail.com>
+# License:  	MIT License
+# Upstream: 	https://github.com/vague2k/vague.nvim/blob/main/extras/ghostty/vague
+
+palette = 0=#141415
+palette = 1=#df6882
+palette = 2=#6e94b2
+palette = 3=#f3be7c
+palette = 4=#9bb4bc
+palette = 5=#bb9dbd
+palette = 6=#c48282
+palette = 7=#cdcdcd
+palette = 8=#606079
+palette = 9=#e5869b
+palette = 10=#8ba9c1
+palette = 11=#f5cb96
+palette = 12=#afc3c9
+palette = 13=#c9b1ca
+palette = 14=#d09b9b
+palette = 15=#d7d7d7
+
+background = #141415
+foreground = #cdcdcd
+cursor-color = #cdcdcd
+selection-background = #252530
+selection-foreground = #cdcdcd

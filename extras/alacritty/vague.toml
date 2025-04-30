@@ -1,0 +1,30 @@
+# Vague for Alacritty
+# -------------------
+# Theme Author: vague2k <ilovedrawing056@gmail.com>
+# Ported by:	skewb1k <skewb1kunix@gmail.com>
+# License:  	MIT License
+# Upstream: 	https://github.com/vague2k/vague.nvim/blob/main/extras/alacritty/vague.toml
+
+[colors.primary]
+background = '#141415'
+foreground = '#cdcdcd'
+
+[colors.normal]
+black = '#141415'
+red = '#df6882'
+green = '#6e94b2'
+yellow = '#f3be7c'
+blue = '#9bb4bc'
+magenta = '#bb9dbd'
+cyan = '#c48282'
+white = '#cdcdcd'
+
+[colors.bright]
+black = '#606079'
+red = '#e5869b'
+green = '#8ba9c1'
+yellow = '#f5cb96'
+blue = '#afc3c9'
+magenta = '#c9b1ca'
+cyan = '#d09b9b'
+white = '#d7d7d7'
