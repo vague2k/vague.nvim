@@ -10,13 +10,13 @@ background = '#141415'
 foreground = '#cdcdcd'
 
 [colors.normal]
-black = '#141415'
+black = '#252530'
 red = '#df6882'
 green = '#6e94b2'
 yellow = '#f3be7c'
 blue = '#9bb4bc'
 magenta = '#bb9dbd'
-cyan = '#c48282'
+cyan = '#aeaed1'
 white = '#cdcdcd'
 
 [colors.bright]
@@ -26,5 +26,5 @@ green = '#8ba9c1'
 yellow = '#f5cb96'
 blue = '#afc3c9'
 magenta = '#c9b1ca'
-cyan = '#d09b9b'
+cyan = '#bebeda'
 white = '#d7d7d7'
