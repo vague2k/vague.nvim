@@ -116,6 +116,7 @@ require("vague").setup({
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Snacks](https://github.com/folke/snacks.nvim)
 - [Rainbow delimiters](https://github.com/hiphish/rainbow-delimiters.nvim)
+- [Mini](https://github.com/echasnovski/mini.nvim)
 
 ## Contributing
 
