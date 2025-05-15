@@ -7,6 +7,7 @@ return {
   lsp_plugin = require("vague.groups.lsp-plugin").get_colors(curr_internal_conf),
   gitsigns = require("vague.groups.gitsigns").get_colors(curr_internal_conf),
   neotest = require("vague.groups.neotest").get_colors(curr_internal_conf),
+  mini = require("vague.groups.mini").get_colors(curr_internal_conf),
   neotree = require("vague.groups.neotree").get_colors(curr_internal_conf),
   syntax = require("vague.groups.syntax").get_colors(curr_internal_conf),
   telescope = require("vague.groups.telescope").get_colors(curr_internal_conf),
