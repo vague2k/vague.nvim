@@ -1,0 +1,25 @@
+# https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes#creating-your-own-color-scheme
+{
+  "name": "Vague",
+  "black": "#252530",
+  "red": "#d8647e",
+  "green": "#7fa563",
+  "yellow": "#f3be7c",
+  "blue": "#6e94b2",
+  "purple": "#bb9dbd",
+  "cyan": "#aeaed1",
+  "white": "#cdcdcd",
+  "brightBlack": "#606079",
+  "brightRed": "#d8647e",
+  "brightGreen": "#7fa563",
+  "brightYellow": "#f3be7c",
+  "brightBlue": "#6e94b2",
+  "brightPurple": "#bb9dbd",
+  "brightCyan": "#aeaed1",
+  "brightWhite": "#d7d7d7",
+
+  "background": "#141414",
+  "foreground": "#cdcdcd",
+  "selectionBackground": "#252530",
+  "cursorColor": "#cdcdcd"
+}
