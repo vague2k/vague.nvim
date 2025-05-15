@@ -12,23 +12,22 @@ color=141415 cdcdcd
 background=141415
 foreground=cdcdcd
 
-regular0=252530
-regular1=df6882
-regular2=6e94b2
-regular3=f3be7c
-regular4=9bb4bc
-regular5=bb9dbd
-regular6=aeaed1
-regular7=cdcdcd
+regular0=#252530
+regular1=#d8647e
+regular2=#7fa563
+regular3=#f3be7c
+regular4=#6e94b2
+regular5=#bb9dbd
+regular6=#aeaed1
+regular7=#cdcdcd
 
-bright0=606079
-bright1=e5869b
-bright2=8ba9c1
-bright3=f5cb96
-bright4=afc3c9
-bright5=c9b1ca
-bright6=bebeda
-bright7=d7d7d7
+bright8=#606079
+bright9=#d8647e
+bright10=#7fa563
+bright11=#f3be7c
+bright12=#6e94b2
+bright13=#bb9dbd
+bright14=#aeaed1
+bright15=#d7d7d7
 
 flash=f3be7c
-

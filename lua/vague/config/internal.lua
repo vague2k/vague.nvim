@@ -117,7 +117,7 @@ local DEFAULT_SETTINGS = {
     ---@type string
     visual = "#333738",
     ---@type string
-    error = "#df6882",
+    error = "#d8647e",
     ---@type string
     warning = "#f3be7c",
     ---@type string
@@ -131,7 +131,7 @@ local DEFAULT_SETTINGS = {
     ---@type string
     search = "#405065",
     ---@type string
-    plus = "#8cb66d",
+    plus = "#7fa563",
     ---@type string
     delta = "#f3be7c",
   },
