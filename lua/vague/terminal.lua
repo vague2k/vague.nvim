@@ -12,12 +12,12 @@ M.set_highlights = function()
   vim.g.terminal_color_6 = c.constant -- cyan
   vim.g.terminal_color_7 = c.fg -- white
   vim.g.terminal_color_8 = c.comment -- gray
-  vim.g.terminal_color_9 = c.error -- red
-  vim.g.terminal_color_10 = c.plus -- green
-  vim.g.terminal_color_11 = c.warning -- yellow
-  vim.g.terminal_color_12 = c.keyword -- blue
-  vim.g.terminal_color_13 = c.parameter -- purple
-  vim.g.terminal_color_14 = c.constant -- cyan
+  vim.g.terminal_color_9 = "#e08398" -- red
+  vim.g.terminal_color_10 = "#99b782" -- green
+  vim.g.terminal_color_11 = "#f5cb96" -- yellow
+  vim.g.terminal_color_12 = "#8ba9c1" -- blue
+  vim.g.terminal_color_13 = "#c9b1ca" -- purple
+  vim.g.terminal_color_14 = "#bebeda" -- cyan
   vim.g.terminal_color_15 = c.fg -- white
 end
 return M
