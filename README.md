@@ -90,14 +90,14 @@ require("vague").setup({
     constant = "#aeaed1",
     parameter = "#bb9dbd",
     visual = "#333738",
-    error = "#df6882",
+    error = "#d8647e",
     warning = "#f3be7c",
     hint = "#7e98e8",
     operator = "#90a0b5",
     keyword = "#6e94b2",
     type = "#9bb4bc",
     search = "#405065",
-    plus = "#8cb66d",
+    plus = "#7fa563",
     delta = "#f3be7c",
   },
 })
@@ -117,6 +117,14 @@ require("vague").setup({
 - [Snacks](https://github.com/folke/snacks.nvim)
 - [Rainbow delimiters](https://github.com/hiphish/rainbow-delimiters.nvim)
 - [Mini](https://github.com/echasnovski/mini.nvim)
+
+## Extras
+
+Extra color configs for [Ghostty](https://ghostty.org/),
+[Alacritty](https://github.com/alacritty/alacritty),
+[Kitty](https://sw.kovidgoyal.net/kitty) and [foot](https://codeberg.org/dnkl/foot) can be
+found in [extras](extras/). To use them, refer to their respective
+documentation.
 
 ## Contributing
 
