@@ -15,5 +15,6 @@ return {
   dashboard = require("vague.groups.dashboard").get_colors(curr_internal_conf),
   snacks_picker = require("vague.groups.snacks-picker").get_colors(curr_internal_conf),
   snacks_input = require("vague.groups.snacks-input").get_colors(curr_internal_conf),
+  snacks_indent = require("vague.groups.snacks-indent").get_colors(curr_internal_conf),
   rainbow_delimiters = require("vague.groups.rainbow-delimiters").get_colors(curr_internal_conf),
 }
