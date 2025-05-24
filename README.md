@@ -1,8 +1,4 @@
-![vague-banner](https://github.com/user-attachments/assets/788de8f0-a397-448b-bdf3-4881e2f5e979)
-
-<img width="1582" alt="theme" src="https://github.com/user-attachments/assets/4424408e-812c-4976-a28b-f3e592e9514d" />
-
-vague is a cool, dark, low contrast theme inspired by [ThePrimeagen](https://github.com/ThePrimeagen)'s use of [rose-pine](https://github.com/rose-pine/neovim) without fixing [tmux](https://github.com/tmux/tmux)'s colors.
+<img width="1582" alt="Screenshot 2025-05-24 at 1 44 17 PM" src="https://github.com/user-attachments/assets/8145d76e-3040-4bee-b6bf-3c65140f4786" />
 
 ## Installation
 
