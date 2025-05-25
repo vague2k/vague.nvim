@@ -71,6 +71,10 @@ require("vague").setup({
       match = "bold",
     },
   },
+
+  -- Override highlights or add new highlights
+  on_highlights = function(highlights, colors) end,
+
   -- Override colors
   colors = {
     bg = "#141415",
