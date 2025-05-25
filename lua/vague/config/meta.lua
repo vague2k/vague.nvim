@@ -94,6 +94,7 @@
 ---@field style? VagueColorscheme.style
 ---@field colors? VagueColorscheme.colors
 ---@field plugins? VagueColorscheme.plugins
+---@field on_highlights? fun(highlights: table<string, vim.api.keyset.highlight>, colors: VagueColorscheme.InternalConfig.colors)
 
 ---@type VagueColorscheme.Config | fun():VagueColorscheme.Config | nil
 vim.g.vague_colorscheme = vim.g.vague_colorscheme

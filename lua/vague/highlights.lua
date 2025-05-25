@@ -1,3 +1,4 @@
+local curr_internal_conf = require("vague.config.internal").current
 local groups = require("vague.groups")
 local M = {}
 
@@ -24,9 +25,17 @@ M.set_highlights = function()
   if groups.lsp_native and vim.api.nvim_call_function("has", { "nvim-0.9" }) == 1 then
     set_vim_highlights(groups.lsp_native)
   end
+
+  local highlights = {}
   for _, group in pairs(groups) do
-    set_vim_highlights(group)
+    for hl, settings in pairs(group) do
+      highlights[hl] = settings
+    end
   end
+
+  -- Allow user to add or override any highlight groups
+  curr_internal_conf.on_highlights(highlights, curr_internal_conf.colors)
+  set_vim_highlights(highlights)
 end
 
 return M

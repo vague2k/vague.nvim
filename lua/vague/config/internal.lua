@@ -50,6 +50,10 @@ local DEFAULT_SETTINGS = {
     builtin_variables = "none",
   },
 
+  ---@param highlights table<string, vim.api.keyset.highlight>
+  ---@param colors VagueColorscheme.InternalConfig.colors
+  on_highlights = function(highlights, colors) end,
+
   ---@class VagueColorscheme.InternalConfig.plugins
   plugins = {
     ---@class VagueColorscheme.InternalConfig.plugins.cmp
