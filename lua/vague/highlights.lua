@@ -25,6 +25,7 @@ M.set_highlights = function()
     set_vim_highlights(groups.lsp_native)
   end
 
+  -- Gather all the highlight groups in a table
   local highlights = {}
   for _, group in pairs(groups) do
     for hl, settings in pairs(group) do
@@ -32,6 +33,9 @@ M.set_highlights = function()
     end
   end
 
+  -- Allow user to add or override any highlight groups
+  local curr_internal_conf = require("vague.config.internal").current
+  curr_internal_conf.on_highlights(highlights, curr_internal_conf.colors)
   set_vim_highlights(highlights)
 end
 

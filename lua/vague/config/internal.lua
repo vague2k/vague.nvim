@@ -50,6 +50,8 @@ local DEFAULT_SETTINGS = {
     builtin_variables = "none",
   },
 
+  on_highlights = function(highlights, colors) end,
+
   ---@class VagueColorscheme.InternalConfig.plugins
   plugins = {
     ---@class VagueColorscheme.InternalConfig.plugins.cmp
