@@ -1,0 +1,31 @@
+# You'll need to set vague as your terminal theme as
+# well as there are colors selected by lazygit that
+# come from the terminal palette.
+gui:
+  authorColors:
+    "*": "#aeaed1"
+  theme:
+    activeBorderColor:
+      - "#6e94b2"
+      - "bold"
+    inactiveBorderColor:
+      - "#878787"
+    searchingActiveBorderColor:
+      - "#6e94b2"
+      - "bold"
+    optionsTextColor:
+      - "#6e94b2"
+    selectedLineBgColor:
+      - "#252530"
+    cherryPickedCommitFgColor:
+      - "#c3c3d5"
+    cherryPickedCommitBgColor:
+      - "bg"
+    markedBaseCommitFgColor:
+      - "#c3c3d5"
+    markedBaseCommitBgColor:
+      - "bg"
+    unstagedChangesColor:
+      - "#d8647e"
+    defaultFgColor:
+      - "#cdcdcd"
