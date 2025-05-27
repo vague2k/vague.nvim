@@ -91,6 +91,8 @@
 
 ---@class VagueColorscheme.Config
 ---@field transparent? boolean
+---@field bold? boolean
+---@field italic? boolean
 ---@field style? VagueColorscheme.style
 ---@field colors? VagueColorscheme.colors
 ---@field plugins? VagueColorscheme.plugins
