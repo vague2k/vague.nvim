@@ -5,21 +5,6 @@ local M = {}
 ---@return table
 M.get_colors = function(conf)
   local c = conf.colors
-  -- override bold/italic if global setting is set to false
-  conf.style = vim.iter(conf.style):fold(
-    {},
-    ---@param v CodeStyle
-    function(acc, k, v)
-      if v == "bold" and not conf.bold then
-        v = "none"
-      elseif v == "italic" and not conf.italic then
-        v = "none"
-      end
-      acc[k] = v
-      return acc
-    end
-  )
-
     -- stylua: ignore
   local hl = {
     Boolean         = { fg = c.number, gui = conf.style.boolean },             -- boolean constants

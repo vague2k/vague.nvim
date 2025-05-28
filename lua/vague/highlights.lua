@@ -5,6 +5,11 @@ local M = {}
 ---@param highlights table <string, table>
 local function set_vim_highlights(highlights)
   for name, setting in pairs(highlights) do
+    if setting.gui == "bold" and not curr_internal_conf.bold then
+      setting.gui = "none"
+    elseif setting.gui == "italic" and not curr_internal_conf.italic then
+      setting.gui = "none"
+    end
     vim.api.nvim_command(
       string.format(
         "highlight %s guifg=%s guibg=%s guisp=%s gui=%s",
