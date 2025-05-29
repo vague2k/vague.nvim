@@ -5,7 +5,6 @@ local M = {}
 ---@return table
 M.get_colors = function(conf)
   local c = conf.colors
-
     -- stylua: ignore
   local hl = {
     Boolean         = { fg = c.number, gui = conf.style.boolean },             -- boolean constants

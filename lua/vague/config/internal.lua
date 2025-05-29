@@ -5,6 +5,10 @@ local DEFAULT_SETTINGS = {
 
   ---@type boolean
   transparent = false,
+  ---@type boolean
+  bold = true,
+  ---@type boolean
+  italic = true,
   ---@class VagueColorscheme.InternalConfig.style
   style = {
     ---@type string
