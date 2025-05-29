@@ -17,7 +17,7 @@ M.get_colors = function(conf)
     DiagnosticVirtualTextError    = { fg = c.error, gui = conf.plugins.lsp.diagnostic_error },   -- virtual text for errors
     DiagnosticVirtualTextHint     = { fg = c.hint, gui = conf.plugins.lsp.diagnostic_hint},      -- virtual text for hints
     DiagnosticVirtualTextInfo     = { fg = c.delta, gui = conf.plugins.lsp.diagnostic_info },    -- virtual text for info
-    DiagnosticVirtualTextWarn     = { fg = c.warning },                                          -- virtual text for warnings
+    DiagnosticVirtualTextWarn     = { fg = c.warning, gui = conf.plugins.lsp.diagnostic_warn },  -- virtual text for warnings
     DiagnosticWarn                = { fg = c.warning, gui = conf.plugins.lsp.diagnostic_warn},   -- diagnostic warning
     LspCodeLens                   = { fg = c.comment, gui = conf.style.comments },               -- code lens text
     LspCodeLensSeparator          = { fg = c.comment },                                          -- code lens separator
