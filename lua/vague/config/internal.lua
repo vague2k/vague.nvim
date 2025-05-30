@@ -81,6 +81,8 @@ local DEFAULT_SETTINGS = {
       ---@type string
       diagnostic_info = "italic",
       ---@type string
+      diagnostic_ok = "none",
+      ---@type string
       diagnostic_warn = "bold",
     },
     ---@class VagueColorscheme.InternalConfig.plugins.neotest

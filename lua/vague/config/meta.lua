@@ -57,6 +57,7 @@
 ---@field diagnostic_error? CodeStyle -- lsp diagnostic error text
 ---@field diagnostic_hint? CodeStyle -- lsp diagnostic hint text
 ---@field diagnostic_info? CodeStyle -- lsp diagnostic info text
+---@field diagnostic_ok? CodeStyle -- lsp diagnostic ok text
 ---@field diagnostic_warn? CodeStyle -- lsp diagnostic warn text
 
 ---@class VagueColorscheme.plugins

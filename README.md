@@ -64,6 +64,7 @@ require("vague").setup({
       diagnostic_error = "bold",
       diagnostic_hint = "none",
       diagnostic_info = "italic",
+      diagnostic_ok = "none",
       diagnostic_warn = "bold",
     },
     neotest = {
