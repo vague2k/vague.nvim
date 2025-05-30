@@ -13,12 +13,12 @@ M.get_colors = function(conf)
     DiagnosticOk                  = { fg = c.plus, gui = conf.plugins.lsp.diagnostic_ok },       -- diagnostic ok
     DiagnosticUnderlineError      = { gui = "undercurl", sp = c.error },                         -- undercurl for errors
     DiagnosticUnderlineHint       = { gui = "undercurl", sp = c.hint },                          -- undercurl for hints
-    DiagnosticUnderlineInfo       = { gui = "undercurl", sp = c.hint },                          -- undercurl for info
+    DiagnosticUnderlineInfo       = { gui = "undercurl", sp = c.constant },                      -- undercurl for info
     DiagnosticUnderlineOk         = { gui = "undercurl", sp = c.plus },                          -- undercurl for ok
     DiagnosticUnderlineWarn       = { gui = "undercurl", sp = c.delta },                         -- undercurl for warnings
     DiagnosticVirtualTextError    = { fg = c.error, gui = conf.plugins.lsp.diagnostic_error },   -- virtual text for errors
     DiagnosticVirtualTextHint     = { fg = c.hint, gui = conf.plugins.lsp.diagnostic_hint},      -- virtual text for hints
-    DiagnosticVirtualTextInfo     = { fg = c.delta, gui = conf.plugins.lsp.diagnostic_info },    -- virtual text for info
+    DiagnosticVirtualTextInfo     = { fg = c.constant, gui = conf.plugins.lsp.diagnostic_info }, -- virtual text for info
     DiagnosticVirtualTextOk       = { fg = c.plus, gui = conf.plugins.lsp.diagnostic_ok },       -- virtual text for ok
     DiagnosticVirtualTextWarn     = { fg = c.warning, gui = conf.plugins.lsp.diagnostic_warn },  -- virtual text for warnings
     DiagnosticWarn                = { fg = c.warning, gui = conf.plugins.lsp.diagnostic_warn},   -- diagnostic warning
