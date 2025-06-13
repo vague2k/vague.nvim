@@ -121,6 +121,7 @@ require("vague").setup({
 - [Snacks](https://github.com/folke/snacks.nvim)
 - [Rainbow delimiters](https://github.com/hiphish/rainbow-delimiters.nvim)
 - [Mini](https://github.com/echasnovski/mini.nvim)
+- [Vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
 
 ## Extras
 
