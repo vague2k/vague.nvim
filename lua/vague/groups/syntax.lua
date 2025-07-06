@@ -1,10 +1,10 @@
 local M = {}
 
----comment
 ---@param conf VagueColorscheme.InternalConfig
 ---@return table
 M.get_colors = function(conf)
   local c = conf.colors
+
     -- stylua: ignore
   local hl = {
     Boolean         = { fg = c.number, gui = conf.style.boolean },             -- boolean constants
@@ -40,9 +40,8 @@ M.get_colors = function(conf)
     Todo            = { fg = c.func, gui = conf.style.comments },              -- (preferred) 'TODO' keywords in comments
     Type            = { fg = c.type },                                         -- (preferred) 'int', 'long', 'char' etc
     Typedef         = { fg = c.constant },                                     -- 'typedef'
-}
+  }
 
   return hl
 end
-
 return M

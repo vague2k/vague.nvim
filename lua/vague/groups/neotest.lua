@@ -18,7 +18,7 @@ M.get_colors = function(conf)
     NeotestTarget           = { fg = c.hint },                                           -- Target test
     NeotestFocused          = { fg = c.delta, gui = conf.plugins.neotest.focused },      -- Focused test
     NeotestRunning          = { fg = c.hint },                                           -- Running tests
-    NeotestAdapterName      = { fg = c.hint, gui = conf.plugins.neotest.adapter_name }, -- Adapter name in tests
+    NeotestAdapterName      = { fg = c.hint, gui = conf.plugins.neotest.adapter_name },  -- Adapter name in tests
     NeotestNamespace        = { fg = c.parameter },                                      -- Namespace for tests
     NeotestSkipped          = { fg = c.warning },                                        -- Skipped tests
     NeotestIndent           = { fg = c.comment },                                        -- Indentation for tests

@@ -72,5 +72,4 @@ M.get_colors = function(conf)
 
   return hl
 end
-
 return M

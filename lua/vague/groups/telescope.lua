@@ -13,7 +13,6 @@ M.get_colors = function(conf)
     TelescopeSelection        = { fg = c.constant, bg = c.line },                      -- Selection in Telescope
     TelescopeSelectionCaret   = { fg = c.constant },                                       -- Caret in Telescope selection
     TelescopeResultsNormal    = { fg = c.fg },                                         -- Normal text in Telescope results
-
   }
 
   return hl
