@@ -1,4 +1,5 @@
 local syntax_group = require("vague.groups.syntax")
+local diff_group = require("vague.groups.diff")
 local M = {}
 
 ---comment
@@ -7,6 +8,7 @@ local M = {}
 M.get_colors = function(conf)
   local c = conf.colors
   local syntax = syntax_group.get_colors(conf)
+  local diff = diff_group.get_colors(conf)
 
     --stylua: ignore
   local hl = {
@@ -19,9 +21,11 @@ M.get_colors = function(conf)
     ["@constant.macro"]        = syntax["Macro"],                                        -- constants defined by macros, like 'NULL' in C
     ["@constructor"]           = { fg = c.constant, gui = conf.style.functions },        -- constructor calls and definitions
     ["@constructor.lua"]       = { fg = c.type, gui = conf.style.functions },            -- constructor calls and definitions, `= { }` in Lua
-    ["@diff.delta"]            = { fg = c.delta },                                       -- changed text (diff files)
-    ["@diff.minus"]            = { fg = c.error },                                       -- removed text (diff files)
-    ["@diff.plus"]             = { fg = c.plus },                                        -- added text (diff files)
+    ["@text.diff.add"]         = diff["DiffAdd"],
+    ["@text.diff.delete"]      = diff["DiffDelete"],
+    ["@diff.plus"]             = diff["DiffAdd"],
+    ["@diff.delta"]            = diff["DiffChange"],
+    ["@diff.minus"]            = diff["DiffDelete"],
     ["@function"]              = syntax["Function"],                                     -- functions
     ["@function.builtin"]      = { fg = c.func, gui = conf.style.builtin_functions },    -- built-in functions
     ["@function.call"]         = { fg = c.parameter },                                   -- function calls

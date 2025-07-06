@@ -21,14 +21,6 @@ M.get_colors = function(conf)
     Debug            = { fg = c.constant },
     debugPC          = { fg = c.bg, bg = c.fg },
     debugBreakpoint  = { fg = c.bg, bg = c.operator },
-    DiffAdd          = { fg = c.plus },
-    DiffChange       = { fg = c.delta },
-    DiffDelete       = { fg = c.error },
-    DiffText         = { fg = c.fg },
-    DiffAdded        = { fg = c.plus },
-    DiffRemoved      = { fg = c.error },
-    DiffFile         = { fg = c.keyword },
-    DiffIndexLine    = { fg = c.comment },
     Directory        = { fg = c.hint },
     ErrorMsg         = { fg = c.error, gui = "bold" },
     EndOfBuffer      = { fg = c.comment or c.bg },
@@ -80,5 +72,4 @@ M.get_colors = function(conf)
 
   return hl
 end
-
 return M
