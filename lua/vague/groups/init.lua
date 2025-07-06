@@ -1,6 +1,7 @@
 local curr_internal_conf = require("vague.config.internal").current
 return {
   common = require("vague.groups.common").get_colors(curr_internal_conf),
+  diff = require("vague.groups.diff").get_colors(curr_internal_conf),
   cmp = require("vague.groups.cmp").get_colors(curr_internal_conf),
   blink = require("vague.groups.blink").get_colors(curr_internal_conf),
   lsp_native = require("vague.groups.lsp-native").get_colors(curr_internal_conf),
