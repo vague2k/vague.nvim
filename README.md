@@ -112,6 +112,7 @@ require("vague").setup({
 - [Blink](https://github.com/Saghen/blink.cmp)
 - [Cmp](https://github.com/hrsh7th/nvim-cmp)
 - [Dashboard](https://github.com/nvimdev/dashboard-nvim)
+- [Diffview](https://github.com/sindrets/diffview.nvim)
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
