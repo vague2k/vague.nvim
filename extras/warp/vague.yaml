@@ -1,7 +1,7 @@
 name: Vague
 background: '#141415'
 foreground: '#cdcdcd'
-accent: '#f5cb96'
+accent: '#6e94b2'
 details: darker
 terminal_colors:
   normal:
