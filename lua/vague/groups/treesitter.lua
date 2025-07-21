@@ -2,7 +2,6 @@ local syntax_group = require("vague.groups.syntax")
 local diff_group = require("vague.groups.diff")
 local M = {}
 
----comment
 ---@param conf VagueColorscheme.InternalConfig
 ---@return table
 M.get_colors = function(conf)

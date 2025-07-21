@@ -13,6 +13,7 @@ return {
   syntax = require("vague.groups.syntax").get_colors(curr_internal_conf),
   telescope = require("vague.groups.telescope").get_colors(curr_internal_conf),
   treesitter = require("vague.groups.treesitter").get_colors(curr_internal_conf),
+  treesitter_context = require("vague.groups.treesitter-context").get_colors(curr_internal_conf),
   dashboard = require("vague.groups.dashboard").get_colors(curr_internal_conf),
   snacks_picker = require("vague.groups.snacks-picker").get_colors(curr_internal_conf),
   snacks_input = require("vague.groups.snacks-input").get_colors(curr_internal_conf),

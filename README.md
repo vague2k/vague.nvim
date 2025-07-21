@@ -119,6 +119,7 @@ require("vague").setup({
 - [Neotest](https://github.com/nvim-neotest/neotest)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 - [Snacks](https://github.com/folke/snacks.nvim)
 - [Rainbow delimiters](https://github.com/hiphish/rainbow-delimiters.nvim)
 - [Mini](https://github.com/echasnovski/mini.nvim)
