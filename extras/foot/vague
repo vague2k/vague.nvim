@@ -5,12 +5,10 @@
 # License:  	MIT License
 # Upstream: 	https://github.com/vague2k/vague.nvim/blob/main/extras/foot/vague
 
-[cursor]
-color=141415 cdcdcd
-
 [colors]
 background=141415
 foreground=cdcdcd
+cursor=141415 cdcdcd
 
 regular0=252530
 regular1=d8647e
