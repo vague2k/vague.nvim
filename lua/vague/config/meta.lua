@@ -68,6 +68,7 @@
 
 ---@class VagueColorscheme.colors
 ---@field bg? string
+---@field inactiveBg? string
 ---@field fg? string
 ---@field floatBorder? string
 ---@field line? string
