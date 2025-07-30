@@ -103,6 +103,8 @@ local DEFAULT_SETTINGS = {
     ---@type string
     bg = "#141415",
     ---@type string
+    inactiveBg = "#1c1c24",
+    ---@type string
     fg = "#cdcdcd",
     ---@type string
     floatBorder = "#878787",

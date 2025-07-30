@@ -82,6 +82,7 @@ require("vague").setup({
   -- Override colors
   colors = {
     bg = "#141415",
+    inactiveBg = "#1c1c24",
     fg = "#cdcdcd",
     floatBorder = "#878787",
     line = "#252530",
@@ -109,7 +110,7 @@ require("vague").setup({
 
 ## Explicitly Supported plugins
 
-- [Blink](https://github.com/Saghen/blink.cmp)
+- [Blink-cmp](https://github.com/Saghen/blink.cmp)
 - [Cmp](https://github.com/hrsh7th/nvim-cmp)
 - [Dashboard](https://github.com/nvimdev/dashboard-nvim)
 - [Diffview](https://github.com/sindrets/diffview.nvim)
@@ -127,11 +128,7 @@ require("vague").setup({
 
 ## Extras
 
-Extra color configs for [Ghostty](https://ghostty.org/),
-[Alacritty](https://github.com/alacritty/alacritty),
-[Kitty](https://sw.kovidgoyal.net/kitty) and [foot](https://codeberg.org/dnkl/foot) can be
-found in [extras](extras/). To use them, refer to their respective
-documentation.
+Extra color configs for other tools can be found in [extras](extras/).
 
 ## Contributing
 
