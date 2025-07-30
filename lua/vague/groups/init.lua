@@ -4,6 +4,7 @@ return {
   diff = require("vague.groups.diff").get_colors(curr_internal_conf),
   cmp = require("vague.groups.cmp").get_colors(curr_internal_conf),
   blink = require("vague.groups.blink").get_colors(curr_internal_conf),
+  netrw = require("vague.groups.netrw").get_colors(curr_internal_conf),
   lsp_native = require("vague.groups.lsp-native").get_colors(curr_internal_conf),
   lsp_plugin = require("vague.groups.lsp-plugin").get_colors(curr_internal_conf),
   gitsigns = require("vague.groups.gitsigns").get_colors(curr_internal_conf),
