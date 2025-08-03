@@ -2,17 +2,35 @@
 
 ## Installation
 
+Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+
 ```lua
--- Lazy
 {
   "vague2k/vague.nvim",
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other plugins
   config = function()
     -- NOTE: you do not need to call setup if you don't want to.
     require("vague").setup({
       -- optional configuration here
     })
+    vim.cmd("colorscheme vague")
   end
 },
+```
+
+Using Neovim 0.12 built-in plugin manager `vim.pack`:
+
+```lua
+vim.pack.add({
+  "https://github.com/vague2k/vague.nvim",
+})
+
+require("vague").setup({
+    -- optional configuration here
+})
+
+vim.cmd("colorscheme vague")
 ```
 
 ## Default configuration
@@ -109,7 +127,7 @@ require("vague").setup({
 
 ## Explicitly Supported plugins
 
-- [Blink](https://github.com/Saghen/blink.cmp)
+- [Blink-cmp](https://github.com/Saghen/blink.cmp)
 - [Cmp](https://github.com/hrsh7th/nvim-cmp)
 - [Dashboard](https://github.com/nvimdev/dashboard-nvim)
 - [Diffview](https://github.com/sindrets/diffview.nvim)
@@ -127,11 +145,7 @@ require("vague").setup({
 
 ## Extras
 
-Extra color configs for [Ghostty](https://ghostty.org/),
-[Alacritty](https://github.com/alacritty/alacritty),
-[Kitty](https://sw.kovidgoyal.net/kitty) and [foot](https://codeberg.org/dnkl/foot) can be
-found in [extras](extras/). To use them, refer to their respective
-documentation.
+Extra color configs for other tools can be found in [extras](extras/).
 
 ## Contributing
 
