@@ -5,42 +5,28 @@ local M = {}
 M.get_colors = function(conf)
   local c = conf.colors
 
-  -- Reference https://github.com/nvim-lualine/lualine.nvim/raw/refs/heads/master/lua/lualine/themes/iceberg_dark.lua
-  local colors = {
-    color2 = c.bg,
-    color3 = c.builtin,
-    color4 = c.property,
-    color5 = c.line,
-    color8 = c.string,
-    color9 = c.property,
-    color10 = c.inactiveBg,
-    color11 = c.bg,
-    color12 = c.operator,
-    color15 = c.delta,
-  }
-
   return {
     visual = {
-      a = { fg = colors.color2, bg = colors.color3, gui = "bold" },
-      b = { fg = colors.color4, bg = colors.color5 },
+      a = { fg = c.bg, bg = c.builtin, gui = "bold" },
+      b = { fg = c.property, bg = c.line },
     },
     replace = {
-      a = { fg = colors.color2, bg = colors.color8, gui = "bold" },
-      b = { fg = colors.color4, bg = colors.color5 },
+      a = { fg = c.bg, bg = c.string, gui = "bold" },
+      b = { fg = c.property, bg = c.line },
     },
     inactive = {
-      a = { fg = colors.color9, bg = colors.color10, gui = "bold" },
-      b = { fg = colors.color9, bg = colors.color10 },
-      c = { fg = colors.color9, bg = colors.color10 },
+      a = { fg = c.property, bg = c.inactiveBg, gui = "bold" },
+      b = { fg = c.property, bg = c.inactiveBg },
+      c = { fg = c.property, bg = c.inactiveBg },
     },
     normal = {
-      a = { fg = colors.color11, bg = colors.color12, gui = "bold" },
-      b = { fg = colors.color4, bg = colors.color5 },
-      c = { fg = colors.color4, bg = colors.color10 },
+      a = { fg = c.bg, bg = c.operator, gui = "bold" },
+      b = { fg = c.property, bg = c.line },
+      c = { fg = c.property, bg = c.inactiveBg },
     },
     insert = {
-      a = { fg = colors.color2, bg = colors.color15, gui = "bold" },
-      b = { fg = colors.color4, bg = colors.color5 },
+      a = { fg = c.bg, bg = c.delta, gui = "bold" },
+      b = { fg = c.property, bg = c.line },
     },
   }
 end
