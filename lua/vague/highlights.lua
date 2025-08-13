@@ -24,13 +24,6 @@ local function set_vim_highlights(highlights)
 end
 
 M.set_highlights = function()
-  if groups.treesitter and vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
-    set_vim_highlights(groups.treesitter)
-  end
-  if groups.lsp_native and vim.api.nvim_call_function("has", { "nvim-0.9" }) == 1 then
-    set_vim_highlights(groups.lsp_native)
-  end
-
   local highlights = {}
   for _, group in pairs(groups) do
     for hl, settings in pairs(group) do
