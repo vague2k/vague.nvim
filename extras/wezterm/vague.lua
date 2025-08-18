@@ -32,4 +32,38 @@ return {
     "#bebeda",
     "#d7d7d7",
   },
+  tab_bar = {
+    background = "#141415",
+    active_tab = {
+      bg_color = "#252530",
+      fg_color = "#cdcdcd",
+      intensity = "Normal",
+      underline = "None",
+      italic = false,
+      strikethrough = false,
+    },
+    inactive_tab = {
+      bg_color = "#141415",
+      fg_color = "#606079",
+      intensity = "Normal",
+      underline = "None",
+      italic = false,
+      strikethrough = false,
+    },
+    inactive_tab_hover = {
+      bg_color = "#252530",
+      fg_color = "#cdcdcd",
+      italic = false,
+    },
+    new_tab = {
+      bg_color = "#141415",
+      fg_color = "#6e94b2",
+    },
+    new_tab_hover = {
+      bg_color = "#252530",
+      fg_color = "#8ba9c1",
+      italic = false,
+    },
+    inactive_tab_edge = "#252530",
+  },
 }
