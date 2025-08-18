@@ -20,6 +20,5 @@
 
   "background": "#141414",
   "foreground": "#cdcdcd",
-  "selectionBackground": "#252530",
-  "cursorColor": "#cdcdcd"
+  "selectionBackground": "#252530"
 }
