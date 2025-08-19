@@ -15,7 +15,7 @@ M.get_colors = function(conf)
     CmpItemAbbrMatch      = { fg = c.delta, gui = conf.plugins.cmp.match },       -- matched text in completion menu
     CmpItemAbbrMatchFuzzy = { fg = c.delta, gui = conf.plugins.cmp.match_fuzzy }, -- fuzzy-matched text in completion menu
     CmpItemMenu           = common["Pmenu"],                                      -- menu for completion items
-    CmpKind               = { fg = c.comment },                                   -- kind of completion item
+    CmpItemKind           = { fg = c.comment },                                   -- kind of completion item
   }
 
   return hl
