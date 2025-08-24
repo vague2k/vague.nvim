@@ -28,3 +28,19 @@ blue = '#8ba9c1'
 magenta = '#c9b1ca'
 cyan = '#bebeda'
 white = '#d7d7d7'
+
+[colors.hints.start]
+foreground = "CellBackground"
+background = "CellForeground"
+
+[colors.hints.end]
+foreground = "CellBackground"
+background = "CellForeground"
+
+[colors.search.matches]
+foreground = "CellBackground"
+background = "CellForeground"
+
+[colors.search.focused_match]
+foreground = "CellBackground"
+background = '#f3be7c'
