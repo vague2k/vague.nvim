@@ -1,4 +1,7 @@
-<img width="1582" alt="Screenshot 2025-05-24 at 1 44 17 PM" src="https://github.com/user-attachments/assets/8145d76e-3040-4bee-b6bf-3c65140f4786" />
+<p align="center">
+    <img width="1582" src="https://raw.githubusercontent.com/vague-theme/neovim/main/assets/preview.png" />
+    <h2 align="center">Vague for Neovim</h2>
+</p>
 
 ## Installation
 
@@ -6,7 +9,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  "vague2k/vague.nvim",
+  "vague-theme/neovim",
   lazy = false, -- make sure we load this during startup if it is your main colorscheme
   priority = 1000, -- make sure to load this before all the other plugins
   config = function()
@@ -23,7 +26,7 @@ Using Neovim 0.12 built-in plugin manager `vim.pack`:
 
 ```lua
 vim.pack.add({
-  "https://github.com/vague2k/vague.nvim",
+  "https://github.com/vague-theme/neovim",
 })
 
 require("vague").setup({
@@ -143,13 +146,3 @@ require("vague").setup({
 - [Rainbow delimiters](https://github.com/hiphish/rainbow-delimiters.nvim)
 - [Mini](https://github.com/echasnovski/mini.nvim)
 - [Vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
-
-## Extras
-
-Extra color configs for other tools can be found in [extras](extras/).
-
-## Contributing
-
-PR's are welcome and encouraged.
-
-If you would like to propose support for a specific plugin, you can make a PR with your modifications to the `lua/vague/groups` directory
