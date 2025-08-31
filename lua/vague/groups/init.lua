@@ -20,4 +20,5 @@ return {
   snacks_indent = require("vague.groups.snacks-indent").get_colors(curr_internal_conf),
   rainbow_delimiters = require("vague.groups.rainbow-delimiters").get_colors(curr_internal_conf),
   vim_better_whitespace = require("vague.groups.vim-better-whitespace").get_colors(curr_internal_conf),
+  fzf_lua = require("vague.groups.fzf-lua").get_colors(curr_internal_conf),
 }

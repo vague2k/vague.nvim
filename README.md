@@ -143,6 +143,7 @@ require("vague").setup({
 - [Rainbow delimiters](https://github.com/hiphish/rainbow-delimiters.nvim)
 - [Mini](https://github.com/echasnovski/mini.nvim)
 - [Vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
+- [Fzf-lua](https://github.com/ibhagwan/fzf-lua)
 
 ## Extras
 
