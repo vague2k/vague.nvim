@@ -22,6 +22,7 @@ M.get_colors = function(conf)
     debugPC          = { fg = c.bg, bg = c.fg },
     debugBreakpoint  = { fg = c.bg, bg = c.operator },
     Directory        = { fg = c.hint },
+    OkMsg            = { fg = c.plus },
     ErrorMsg         = { fg = c.error, gui = "bold" },
     EndOfBuffer      = { fg = c.comment or c.bg },
     FloatBorder      = { fg = c.floatBorder, bg = conf.transparent and "none" or c.bg },
