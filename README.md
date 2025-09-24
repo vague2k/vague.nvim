@@ -131,35 +131,13 @@ require("vague").setup({
 You can use the `on_highlight` config option to add new or change existing
 highlight groups. The second argument is the `colors` table defined in the
 config. The overwritten `highlights` object is then used internally to set up
-all highlights (lua tables are passed to functions by reference).
+all highlights (Lua tables are passed to functions by reference).
 
 ```lua
 on_highlights = function(highlights, colors)
-    -- available options: fg, bg, gui, sp
-    highlights.NewHighlight = { fg = colors.fg, bg = colors.bg, gui = "bold" }
-    highlights.ExistingHighlight = { fg = colors.delta }, -- define only fg
-
-    -- if you want to overwrite only a single element of an existing highlight
-    -- use `vim.tbl_deep_extend`:
-    highlights.ExistingHighlight = vim.tbl_extend(
-        "force",
-        highlights.ExistingHighlight,
-        { fg = colors.delta }
-    )
-end
-```
-
-If you have a long list of highlights you want to partially overwrite you can
-use a for loop:
-
-```lua
-on_highlights = function(highlights, colors)
-  local hl = {
-    -- lots of highlight definitions...
-  }
-  for k, v in pairs(hl) do
-    highlights[k] = vim.tbl_extend("force", highlights[k] or {}, v)
-  end
+  -- available options: fg, bg, gui, sp
+  highlights.NewHighlight = { fg = colors.fg, bg = colors.bg, gui = "bold" }
+  highlights.ExistingHighlight.fg = colors.delta -- only overwrite fg
 end
 ```
 
