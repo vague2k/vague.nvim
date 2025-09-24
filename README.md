@@ -27,7 +27,7 @@ vim.pack.add({
 })
 
 require("vague").setup({
-    -- optional configuration here
+  -- optional configuration here
 })
 
 vim.cmd("colorscheme vague")
@@ -124,6 +124,21 @@ require("vague").setup({
     delta = "#f3be7c",
   },
 })
+```
+
+## Overwriting highlights
+
+You can use the `on_highlight` config option to add new or change existing
+highlight groups. The second argument is the `colors` table defined in the
+config. The overwritten `highlights` object is then used internally to set up
+all highlights (Lua tables are passed to functions by reference).
+
+```lua
+on_highlights = function(highlights, colors)
+  -- available options: fg, bg, gui, sp
+  highlights.NewHighlight = { fg = colors.fg, bg = colors.bg, gui = "bold" }
+  highlights.ExistingHighlight.fg = colors.delta -- only overwrite fg
+end
 ```
 
 ## Explicitly Supported plugins
