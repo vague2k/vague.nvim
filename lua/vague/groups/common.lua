@@ -62,7 +62,7 @@ M.get_colors = function(conf)
     Terminal         = { fg = c.fg, bg = conf.transparent and "none" or c.bg },
     ToolbarButton    = { fg = c.bg, bg = c.visual },
     ToolbarLine      = { fg = c.fg },
-    Visual           = { fg = c.fg, bg = c.visual },
+    Visual           = { bg = c.visual },
     VisualNOS        = { fg = "none", bg = c.comment, gui = "underline" },
     WarningMsg       = { fg = c.warning, gui = "bold" },
     Whitespace       = { fg = c.comment },
