@@ -61,7 +61,6 @@ M.get_colors = function(conf)
     ["@punctuation.delimiter"] = { fg = c.fg },                                          -- delimiters, like `; . , `
     ["@punctuation.special"]   = syntax["SpecialChar"],                                  -- special punctuation (e.g., `{}` in string interpolation)
     ["@string"]                = syntax["String"],                                       -- strings
-    ["@string.documentation"]  = syntax["Comment"],                                      -- doc strings
     ["@string.escape"]         = syntax["SpecialChar"],                                  -- escape characters within strings
     ["@string.regexp"]         = syntax["SpecialChar"],                                  -- regular expressions
     ["@string.special.symbol"] = syntax["Identifier"],                                   -- special symbols in strings
